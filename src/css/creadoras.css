@@ -1,5 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    background-color: rgb(86, 236, 86);
+    background-color: #61B323;
+    background-image: url(/public/aguacates.PNG);
+}
+h1 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px #436436;
+  margin-top: 5%;
+}
+nav {
+  background-image: url(/public/aguacates.PNG);
+  height: 120px;
+  padding: 2rem;
+  
 }
 .card {
     text-align: center;
@@ -61,13 +81,18 @@ body {
   transform: rotateY(180deg);
 }
 h2 {
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: #436436;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     font-size: 15px;
     padding: 10px;
     margin: 20px;
 
+}
+.email,
+.linkedin {
+  color: #436436;
+  font-size: 14px;
 }
 .lulupicture { 
     display: block;
@@ -75,6 +100,10 @@ h2 {
     height: 200px;
     margin: 0 auto;
     padding: 8px;
+}
+.nicole-picture {
+  width: 160px;
+  height: auto;
 }
 .linkpicture {
     width: 50px;
