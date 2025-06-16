@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dónde estoy</title>
+    <title>K - Dónde estoy</title>
+    <link rel="stylesheet" href="../src/css/donde-estoy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <div id="logo-container">
+        <a href="../index.html"><i class="arrow left"></i><h1><span id="atomic-numer">k19</span> POTASIO</h1></a>
+       </div>
+        <nav>
+            <ul>
+                <li><a href="../pages/donde-estoy.html" target="_blank">Dónde estoy</a></li>
+                <li><a href="../pages/mi-importancia.html" target="_blank">Mi importancia</a></li>
+                <li><a href="../pages/curiosidades.html" target="_blank">Curiosidades</a></li>
+                <li><a href="../pages/creadoras.html" target="_blank">Creadoras</a></li>
+            </ul>
+            </nav>
+    </header>
+    <main>
+        <div id="carousel-container">
+            <h2>Dónde estoy</h2>
+        </div>
+        <div id="cards-container">
+
+        </div>
+    </main>
+    <!---
+    <footer>
+        <div id="footer-nav">
+
+        </div>
+        <div id="footer-info">
+        <p>&copy; 2025 K. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    -->
+    <script src="../src/js/donde-estoy.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
