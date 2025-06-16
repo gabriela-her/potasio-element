@@ -211,14 +211,14 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-nav ul li a:hover {
+nav ul li:hover {
     background-color: rgba(250, 222, 82, 0.5);
     border-radius: 25px 25px 0 0;
 }
 
 
 main>div {
-    margin: 5% 10%;
+    margin: 0% 10%;
 }
 
 p {
@@ -227,6 +227,11 @@ p {
 
 #carousel-container p {
     width: 70%;
+}
+
+#carousel {
+    padding: 3%;
+    text-align: center;
 }
 
 h2 {
@@ -245,6 +250,7 @@ h3 {
 h4 {
     font-size: 1.3em;
     margin: 0.5em 0;
+    font-weight: 600;
 }
 
 #cards-container {
@@ -265,6 +271,14 @@ h4 {
     border-radius: 10px;
 }
 
+.card ul {
+    line-height: 2.3;
+}
+
+.card ul li::before {
+    content: "📌   ";
+}
+
 footer {
     position: sticky;
     width: 100%;
@@ -279,12 +293,18 @@ footer {
     border-radius: 10px;
     margin: 3% 15%;
     text-align: center;
-    width: 150px;
+    width: 170px;
     line-height: 60px;
+    padding: 10px 40px;
+
 }
 
 #footer-nav ul li a {
     color: #fff;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    display: block;
+    font-weight: bolder;
 }
 
 #footer-nav ul li:first-child {
@@ -302,6 +322,30 @@ footer {
     border-top: 1px solid #C9E3AC;
 }
 
+#arrow-left-footer {
+    width: 10px;
+    height: 10px;
+    border: solid #ffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    vertical-align: sub;
+}
+
+#arrow-right-footer {
+    width: 10px;
+    height: 10px;
+    border: solid #ffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    vertical-align: sub;
+}
+
 /*Responsive Design*/
 
 @media only screen and (max-width: 992px) {
@@ -314,7 +358,16 @@ footer {
     #arrow-left-header {
         margin-left: 1em;
     }
+
     #carousel-container p {
-    width: 100%;
-}
+        width: 100%;
+    }
+
+    #cards-container {
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+    }
 }

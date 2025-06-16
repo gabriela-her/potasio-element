@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Irina Tiron">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K - Dónde estoy</title>
     <link rel="stylesheet" href="../src/css/donde-estoy.css">
@@ -18,7 +19,7 @@
     <header>
         <div id="logo-container">
             <a href="../index.html"><i id="arrow-left-header"></i>
-                <h1><span id="atomic-numer">k<sup>19</sup></span> POTASIO</h1>
+                <h1><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
             </a>
         </div>
         <nav>
@@ -36,46 +37,68 @@
             <h2>Dónde estoy</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ante a sem scelerisque, sit amet
                 fringilla diam condimentum. Proin elit nulla, vestibulum nec maximus eget, mattis nec leo. Suspendisse
-                tristique iaculis tortor nec consequat. Maecenas consequat urna odio, vestibulum faucibus est commodo
-                id. Donec vel dapibus dolor. Suspendisse condimentum euismod viverra. Phasellus imperdiet sagittis
-                sapien a mattis. Donec sit amet commodo justo.
-
+                tristique iaculis tortor nec consequat.
             </p>
-        </div>
-        <div>
-            <h3>Alimentación</h3>
-            <div id="cards-container">
-                <article class="card">
-                    <img src="https://www.soulflower.in/cdn/shop/articles/avocado-1_335cdafd-3f2d-4de4-a016-37f8476e6ecf.jpg?v=1724903357&width=1100"
-                        alt="Aguacate">
-                    <h4>Ejemplo 1</h4>
-                    <p>Contiene 485 mg de potasio por cada 100 g.</p>
-                </article>
-                <article class="card">
-                    <img src="https://www.soulflower.in/cdn/shop/articles/avocado-1_335cdafd-3f2d-4de4-a016-37f8476e6ecf.jpg?v=1724903357&width=1100"
-                        alt="Aguacate">
-                    <h4>Ejemplo 2</h4>
-                    <p>Contiene 485 mg de potasio por cada 100 g.</p>
-                </article>
-                <article class="card">
-                    <img src="https://www.soulflower.in/cdn/shop/articles/avocado-1_335cdafd-3f2d-4de4-a016-37f8476e6ecf.jpg?v=1724903357&width=1100"
-                        alt="Aguacate">
-                    <h4>Ejemplo 3</h4>
-                    <p>Contiene 485 mg de potasio por cada 100 g.</p>
-                </article>
+            <div id="carousel">
+                <div class="carousel-item">
+                    <img src="../public/bananas.png" alt="Bananas">
+                </div>
             </div>
-        </div>
+            <div>
+                <h3>Alimentación</h3>
+                <div id="cards-container">
+                    <article class="card">
+                        <img src="../public/verduras.png" alt="Verduras y hortalizas">
+                        <h4>🥦 Verduras y hortalizas</h4>
+                        <p>Este grupo es de los más ricos en potasio y saludable para destacar.</p>
+                        <ul>
+                            <li>Espinacas (cocidas): ~558 mg</li>
+                            <li>Acelgas (cocidas): ~549 mg</li>
+                            <li>Patatas (cocidas con piel): ~535 mg</li>
+                            <li>Zanahorias (crudas): ~320 mg</li>
+                            <li>Brócoli (cocido): ~293 mg.</li>
+                        </ul>
+
+                    </article>
+                    <article class="card">
+                        <img src="../public/frutas.png" alt="Frutas">
+                        <h4>🍌 Frutas</h4>
+                        <p>Algunas frutas son fuentes destacadas, especialmente las tropicales.</p>
+                        <ul>
+                            <li>Plátano: ~358 mg</li>
+                            <li>Aguacate: ~485 mg</li>
+                            <li>Melón cantalupo: ~267 mg</li>
+                            <li>Kiwi: ~312 mg</li>
+                        </ul>
+
+                    </article>
+                    <article class="card">
+                        <img src="../public/carne.png" alt="Carnes y pescados">
+                        <h4>🥩 Carnes y pescados</h4>
+                        <p>Menos potasio que vegetales, pero siguen siendo relevantes, sobre todo para quienes no
+                            consumen
+                            muchas verduras.</p>
+                        <ul>
+                            <li>Pechuga de pollo (cocida): ~256 mg</li>
+                            <li>Carne magra de ternera (cocida): ~300 mg</li>
+                            <li>Salmón (cocido): ~628 mg</li>
+                            <li>Atún (en lata, en agua): ~237 mg</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
     </main>
 
     <footer>
         <div id="footer-nav">
             <ul>
-            <li><a href="../index.html" target="_blank">Inicio</a></li>
-            <li><a href="../pages/mi-importancia.html" target="_blank">Mi importancia</a></li>
+                <li><a href="../index.html" target="_blank"><i id="arrow-left-footer"></i>Inicio</a></li>
+                <li><a href="../pages/mi-importancia.html" target="_blank">Mi importancia<i
+                            id="arrow-right-footer"></i></a></li>
             </ul>
         </div>
         <div id="footer-info">
-            <p>&copy; 2025 K<sup>19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+            <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
         </div>
     </footer>
 
