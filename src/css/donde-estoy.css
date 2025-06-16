@@ -155,7 +155,7 @@ header {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    margin-left: 1em;
+    margin-left: 3em;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
@@ -211,7 +211,11 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-nav ul li a:hover {}
+nav ul li a:hover {
+    background-color: rgba(250, 222, 82, 0.5);
+    border-radius: 25px 25px 0 0;
+}
+
 
 main>div {
     margin: 5% 10%;
@@ -264,7 +268,37 @@ h4 {
 footer {
     position: sticky;
     width: 100%;
-    padding-left: 10%;
+}
+
+#footer-nav ul {
+    text-align: center;
+}
+
+#footer-nav ul li {
+    display: inline-block;
+    border-radius: 10px;
+    margin: 3% 15%;
+    text-align: center;
+    width: 150px;
+    line-height: 60px;
+}
+
+#footer-nav ul li a {
+    color: #fff;
+}
+
+#footer-nav ul li:first-child {
+    background-color: #F88C8C;
+}
+
+#footer-nav ul li:nth-child(2) {
+    background-color: #436436;
+}
+
+#footer-info {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(201, 227, 172, 0.5);
     border-top: 1px solid #C9E3AC;
 }
 
@@ -276,4 +310,11 @@ footer {
         width: 100%;
         border-bottom: 1px solid #333;
     }
+
+    #arrow-left-header {
+        margin-left: 1em;
+    }
+    #carousel-container p {
+    width: 100%;
+}
 }
