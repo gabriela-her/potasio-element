@@ -1,56 +1,145 @@
 /* RESET CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 /* CUSTOM STYLES */
 body {
     font-family: 'Kodchasan', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffff;
     color: #333;
 }
+
 header {
     width: 100%;
 }
+
 #logo-container {
     display: flex;
     align-items: left;
@@ -59,11 +148,24 @@ header {
     margin: 1% 0;
 }
 
+#arrow-left-header {
+    width: 25px;
+    height: 25px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 1em;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
 #atomic-numer {
     color: #fff;
     background-color: #61B323;
     padding: 10px;
 }
+
 h1 {
     display: inline;
     text-align: left;
@@ -73,41 +175,56 @@ h1 {
     color: #333;
     text-decoration: none;
 }
+
 a {
     text-decoration: none;
     color: #333;
 }
+
 nav {
-	text-align:center;
-	width:100%;
-	position:relative;
-	height:auto;
-	overflow:hidden;
-	background:none;
-    border-bottom:1px solid #000;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background: none;
+    border-bottom: 1px solid #000;
 }
+
 .active {
     background-color: #FADE52;
     border-radius: 25px 25px 0 0;
 }
+
 nav ul {
-	text-align:center;;
+    text-align: center;
 }
+
 nav ul li {
-	display:inline-block;
+    display: inline-block;
 }
+
 nav ul li a {
-	display:inline-block;
-	padding:1em 3em;
-	text-decoration:none;
-	font-size:16px;
+    display: inline-block;
+    padding: 1em 3em;
+    text-decoration: none;
+    font-size: 1.2em;
 }
-nav ul li a:hover {
-	
-}
-#carousel-container {
+
+nav ul li a:hover {}
+
+main>div {
     margin: 5% 10%;
 }
+
+p {
+    line-height: 2;
+}
+
+#carousel-container p {
+    width: 70%;
+}
+
 h2 {
     text-align: left;
     font-size: 2em;
@@ -115,16 +232,48 @@ h2 {
     margin: 1em 0;
     color: #333;
 }
-.arrow {
-  width: 25px;
-  height: 25px;
-  border: solid #333;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin-left: 1em;
+
+h3 {
+    font-size: 1.8em;
+    margin: 1em 0;
 }
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+
+h4 {
+    font-size: 1.3em;
+    margin: 0.5em 0;
+}
+
+#cards-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    width: 33%;
+    margin: 1em;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    position: sticky;
+    width: 100%;
+    padding-left: 10%;
+    border-top: 1px solid #C9E3AC;
+}
+
+/*Responsive Design*/
+
+@media only screen and (max-width: 992px) {
+    nav ul li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
 }
