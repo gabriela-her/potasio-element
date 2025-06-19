@@ -96,10 +96,11 @@ h2 {
 }
 .lulupicture { 
     display: block;
-    width: 200px;
+    width: auto;
     height: 200px;
     margin: 0 auto;
     padding: 8px;
+    align-items: center;
 }
 .nicole-picture {
   width: 160px;
