@@ -234,6 +234,38 @@ p {
     text-align: center;
 }
 
+.carousel-item {
+  display: none;
+}
+
+.carousel-item > img {
+    width: 200px;
+}
+
+#carousel-nav {
+    text-align: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  padding: 10%;
+  color: #333;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+ .carousel-item-active, .dot:hover {
+  background-color: #717171;
+}
+
 h2 {
     text-align: left;
     font-size: 2em;
@@ -276,7 +308,7 @@ h4 {
 }
 
 .card ul li::before {
-    content: "📌   ";
+    content: "-   ";
 }
 
 footer {
