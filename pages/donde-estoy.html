@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Irina Tiron">
@@ -28,13 +29,15 @@
                 <h1><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
             </a>
         </div>
-        <nav>
+        <nav class="topnav" id="myTopnav">
             <ul>
                 <li><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
                 <li><a href="../pages/mi-importancia.html">Mi importancia</a></li>
                 <li><a href="../pages/curiosidades.html">Curiosidades</a></li>
                 <li><a href="../pages/actualidad.html">Actualidad</a></li>
                 <li><a href="../pages/creadoras.html">Creadoras</a></li>
+                <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                        <i class="fa fa-bars"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -125,9 +128,8 @@
     <footer>
         <div id="footer-nav">
             <ul>
-                <li><a href="../index.html" target="_blank"><i id="arrow-left-footer"></i>Inicio</a></li>
-                <li><a href="../pages/mi-importancia.html" target="_blank">Mi importancia<i
-                            id="arrow-right-footer"></i></a></li>
+                <li><a href="../index.html"><i id="arrow-left-footer"></i>Inicio</a></li>
+                <li><a href="../pages/mi-importancia.html">Mi importancia<i id="arrow-right-footer"></i></a></li>
             </ul>
         </div>
         <div id="footer-info">
@@ -137,7 +139,7 @@
 
     <script src="../src/js/donde-estoy.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active y después el color amarillo de fondo en CSS-->
+    <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active y después el color amarillo de fondo en CSS / Con JQuery-->
     <script>
         $(function () {
             $('a').each(function () {
@@ -147,7 +149,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>
