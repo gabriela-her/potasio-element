@@ -136,6 +136,8 @@ body {
     color: #333;
 }
 
+/* NAV */
+
 header {
     width: 100%;
 }
@@ -216,6 +218,7 @@ nav ul li:hover {
     border-radius: 25px 25px 0 0;
 }
 
+/* MAIN */
 
 main>div {
     margin: 0% 10%;
@@ -261,9 +264,6 @@ h5 {
     color: #fff;
     justify-self: right;
 }
-
-
-
 
 #carousel-nav {
     text-align: center;
@@ -336,6 +336,8 @@ h4 {
     content: "-   ";
 }
 
+/* FOOTER */
+
 footer {
     position: sticky;
     width: 100%;
@@ -403,7 +405,7 @@ footer {
     vertical-align: sub;
 }
 
-/*Responsive Design*/
+/* RESPONSIVE */
 
 @media only screen and (max-width: 992px) {
     nav ul li {
