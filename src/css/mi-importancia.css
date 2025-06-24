@@ -177,11 +177,38 @@ nav ul li:hover {
   cursor: pointer;
   transition: transform 0.3s ease;
   border-radius: 250px;
+  animation: palpitar 1.5s infinite ease-in-out, resplandor 2s infinite ease-in-out;
+}
+
+.super-potasio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
 }
 
 #imagen-disparadora:hover {
   transform: scale(1.05);
 }
+
+@keyframes palpitar {
+  0%, 100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes resplandor {
+  0%, 100% {
+    box-shadow: 0 0 20px #a7ff83, 0 0 30px #17c964;
+  }
+  50% {
+    box-shadow: 0 0 50px #ec5db0, 0 0 60px #17c964;
+  }
+}
+
 
 /* Overlay del mapa mental */
 #overlay-mapa {
@@ -233,6 +260,7 @@ nav ul li:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .evaluacion-potasio h2 {
   font-size: 1.8rem;
