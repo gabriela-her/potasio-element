@@ -247,11 +247,11 @@ nav ul li:hover {
 }
 
 
-/* -----------------  fin de mapa mental clickeable ---------------*/
+/* -----------------  inicio del cuestionario ---------------*/
 
 
 .evaluacion-potasio {
-  background: #fff;
+  background: #f89ac2;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -264,8 +264,18 @@ nav ul li:hover {
 
 .evaluacion-potasio h2 {
   font-size: 1.8rem;
-  color: #229c41;
+  color: #f7f9f7;
   margin-bottom: 20px;
+}
+
+fieldset.pregunta {
+  border: none;
+  margin-bottom: 30px;
+  display: none; /* Ocultas todas por defecto */
+}
+
+fieldset.pregunta.activa {
+  display: block; /* Solo la activa se ve */
 }
 
 .evaluacion-potasio form {
@@ -293,30 +303,32 @@ nav ul li:hover {
   display: flex;
   gap: 20px;
   justify-content: center;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .botones button {
   padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
   border: none;
-  background-color: #229c41;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .botones button:hover {
-  background-color: #1a7e31;
+  background-color: #43cf63;
 }
 
 #resultado {
-  max-width: 600px;
-  margin: 40px auto;
-  background-color: #e6f5ec;
-  padding: 30px;
-  border-radius: 12px;
-  display: none;
+  background-color: #fff3f8;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 #resultado.oculto {
