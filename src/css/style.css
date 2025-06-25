@@ -1,4 +1,134 @@
-*{}
+/* RESET CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /* NAV */
 
 header {
@@ -31,7 +161,7 @@ header {
     padding: 10px;
 }
 
-h1 {
+#pageTitle {
     display: inline;
     text-align: left;
     font-size: 2.5em;
@@ -46,7 +176,7 @@ a {
     color: #333;
 }
 
-nav {
+#myTopnav {
     text-align: center;
     width: 100%;
     position: relative;
@@ -69,18 +199,142 @@ nav ul li {
     display: inline-block;
 }
 
-nav ul li a {
+#myTopnav ul li a {
     display: inline-block;
     padding: 1em 3em;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-nav ul li:hover {
+#myTopnav ul li:hover {
     background-color: rgba(250, 222, 82, 0.5);
     border-radius: 25px 25px 0 0;
 }
 
 #fa-bars-menu {
     display: none;
+}
+
+/* FOOTER */
+
+footer {
+    position: sticky;
+    width: 100%;
+}
+
+#footer-nav ul {
+    text-align: center;
+}
+
+#footer-nav ul li {
+    display: inline-block;
+    border-radius: 10px;
+    margin: 3% 15%;
+    text-align: center;
+    width: 170px;
+    line-height: 60px;
+    padding: 10px 40px;
+
+}
+
+#footer-nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    display: block;
+    font-weight: bolder;
+}
+
+#footer-nav ul li:first-child {
+    background-color: #F88C8C;
+}
+
+#footer-nav ul li:nth-child(2) {
+    background-color: #436436;
+}
+
+#footer-info {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(201, 227, 172, 0.5);
+    border-top: 1px solid #C9E3AC;
+}
+
+#arrow-left-footer {
+    width: 10px;
+    height: 10px;
+    border: solid #ffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    vertical-align: sub;
+}
+
+#arrow-right-footer {
+    width: 10px;
+    height: 10px;
+    border: solid #ffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    vertical-align: sub;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 992px) {
+    /* RESPONSIVE NAV */
+    
+     #arrow-left-header {
+        width: 15px;
+        height: 15px;
+        margin-left: 1em;
+    }
+
+    #pageTitle {
+        font-size: 2em;
+    }
+
+     .topnav>ul>li:not(:first-child) {
+        display: none;
+    }
+
+    .topnav>ul>li#fa-bars-menu {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive li#fa-bars-menu a {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive>ul>li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    #myTopnav ul li:hover {
+        background-color: #fff;
+    }
+
+    .active {
+        background-color: #fff;
+        border-radius: 0;
+    }
+
+    #myTopnav ul {
+        text-align: left;
+    }
 }

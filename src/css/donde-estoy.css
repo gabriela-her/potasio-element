@@ -137,7 +137,7 @@ body {
 }
 
 /* NAV */
-
+/*
 header {
     width: 100%;
 }
@@ -221,7 +221,7 @@ nav ul li:hover {
 #fa-bars-menu {
     display: none;
 }
-
+*/
 /* MAIN */
 
 main>div {
@@ -343,7 +343,7 @@ h4 {
 }
 
 /* FOOTER */
-
+/*
 footer {
     position: sticky;
     width: 100%;
@@ -410,11 +410,12 @@ footer {
     -webkit-transform: rotate(315deg);
     vertical-align: sub;
 }
-
+*/
 /* RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 992px) {
     /* RESPONSIVE NAV */
+    /*
      #arrow-left-header {
         width: 15px;
         height: 15px;
@@ -462,7 +463,7 @@ footer {
     nav ul {
         text-align: left;
     }
-    
+    */
     /* RESPONSIVE CAROUSEL */
 
     #carousel-container p {
