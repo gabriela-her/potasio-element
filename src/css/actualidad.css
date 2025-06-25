@@ -1,1 +1,247 @@
-*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7f9;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 40px 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+main {
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-item {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #4CAF50;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.news-item h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.resaltado {
+  background-color: #fffae6;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #4CAF50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.resaltado {
+  background-color: #fffae6;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.news-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 15px;
+  display: block;
+}
+/* Asistente naranja en esquina superior izquierda */
+
+.asistente-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 220px;
+  z-index: 9999;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+/* Burbuja de texto arriba izquierda */
+.burbuja {
+  position: relative;
+  background: #fff;
+  border: 2px solid #f39c12;
+  border-radius: 15px;
+  padding: 15px 20px;
+  color: #e67e22;
+  font-size: 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  line-height: 1.3;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Flecha (punta de la burbuja) */
+.burbuja::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #f39c12 transparent transparent transparent;
+}
+
+/* Naranja caricaturesca */
+.naranja-mascota {
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle at 50% 50%, #ffa500, #e67e22);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  animation: flotar 3s ease-in-out infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.ojos {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 25px;
+}
+
+.ojo {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.boca {
+  width: 40px;
+  height: 20px;
+  background: #000;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hojita {
+  width: 30px;
+  height: 20px;
+  background: #2ecc71;
+  border-radius: 0 100% 0 100%;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.opciones, .formulario {
+  text-align: center;
+}
+
+.opciones button,
+.formulario button {
+  background-color: #e67e22;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 5px 0 5px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.opciones button:hover,
+.formulario button:hover {
+  background-color: #d35400;
+}
+
+.formulario input[type="email"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid #e67e22;
+  border-radius: 8px;
+  margin-right: 5px;
+  width: 140px;
+}
+
+canvas#confeti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+}

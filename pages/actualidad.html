@@ -1,11 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noticias sobre el Potasio</title>
+  <link rel="stylesheet" href="../src/css/actualidad.css">
 </head>
 <body>
-    
+  <header>
+    <h1>Noticias sobre el Potasio</h1>
+    <p>Últimas investigaciones, avances y desarrollos en torno al potasio</p>
+  </header>
+<div class="asistente-container">
+
+  <div class="burbuja" id="burbuja">
+    ¿Quisieras que te enviara las proximas noticias a tu correo?
+  </div>
+
+  <div class="naranja-mascota" aria-label="Mascota asistente naranja" role="img">
+    <div class="ojos">
+      <div class="ojo ojo-izq"></div>
+      <div class="ojo ojo-der"></div>
+    </div>
+    <div class="boca"></div>
+    <div class="hojita"></div>
+  </div>
+
+  <div class="opciones">
+    <button onclick="mostrarFormulario()">Sí</button>
+    <button onclick="decirNo()">No</button>
+  </div>
+
+  <div class="formulario" id="formulario" style="display:none;">
+    <input type="email" id="correo" placeholder="Tu correo electrónico" required />
+    <button onclick="enviarCorreo()">Enviar</button>
+  </div>
+
+  <canvas id="confeti"></canvas>
+</div>
+<main>
+  <div class="news-grid">
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1590080877777-c87d44b15d5b?auto=format&fit=crop&w=600&q=60" alt="Planta industrial de potasa en Michigan">
+      <h2>1. Nueva planta de potasa en Michigan recibe apoyo federal</h2>
+      <p><strong>Junio 2025</strong> — El Departamento de Energía de EE.UU. otorgó un préstamo de $1.260 millones para construir una planta de potasa que producirá 800 000 toneladas anuales y generará 1 600 empleos.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1574226516831-e1dff420e42e?auto=format&fit=crop&w=600&q=60" alt="Plátanos frescos en rama">
+      <h2>2. Plátano: clave para controlar la presión arterial</h2>
+      <p><strong>Mayo 2025</strong> — Estudios recientes muestran que un plátano diario (422 mg de potasio) ayuda a eliminar sodio a través de los riñones y reduce la presión arterial.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1581093588401-3e4c380ca8c8?auto=format&fit=crop&w=600&q=60" alt="Laboratorio científico con tubos de ensayo">
+      <h2>3. Potasio más eficaz que reducir sodio</h2>
+      <p><strong>Mayo 2025</strong> — Investigadores demostraron que elevar el consumo de potasio puede reducir la presión arterial incluso sin disminuir el sodio, gracias a la acción renal y vascular.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=60" alt="Plátanos en un plato saludable">
+      <h2>4. Comer plátano a diario: beneficios más allá del potasio</h2>
+      <p><strong>Mayo 2025</strong> — Incluir plátanos en la dieta diaria es útil, pero se recomienda una alimentación equilibrada con múltiples fuentes de potasio para cubrir requerimientos diarios.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1576765607924-f08035d66ac4?auto=format&fit=crop&w=600&q=60" alt="Corazón saludable ilustración">
+      <h2>5. Potasio reduce riesgo de infarto y ACV</h2>
+      <p><strong>Abril 2025</strong> — Un estudio encontró que dietas ricas en potasio reducen el riesgo de infarto en un 39 %, ACV en un 14 % y muertes en un 21 %, especialmente si se sustituye la sal común por sal potásica.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1616401782847-98efdb33a602?auto=format&fit=crop&w=600&q=60" alt="Sal enriquecida con potasio en cucharilla">
+      <h2>6. OMS recomienda sal enriquecida con potasio</h2>
+      <p><strong>Abril 2025</strong> — La OMS promueve el uso de sal con cloruro de potasio (25 %) para reducir la hipertensión sin aumentar el riesgo de efectos secundarios como la hiperpotasemia.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1581093588401-3e4c380ca8c8?auto=format&fit=crop&w=600&q=60" alt="Investigadores científicos analizando datos">
+      <h2>7. Impacto global del potasio en salud pública</h2>
+      <p><strong>Abril 2025</strong> — El estudio SSaSS, con más de 20 000 participantes, mostró que sustituir sal común por potásica reduce ACV, eventos cardiovasculares y mortalidad total.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1590080877777-c87d44b15d5b?auto=format&fit=crop&w=600&q=60" alt="Instalaciones de planta de producción de potasa">
+      <h2>8. USDA otorga $80 millones a planta potásica</h2>
+      <p><strong>Abril 2025</strong> — El Departamento de Agricultura de EE.UU. financia con $80 millones la planta de potasa en Osceola, fortaleciendo la producción nacional de fertilizantes.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=600&q=60" alt="Fertilizantes agrícolas">
+      <h2>9. Demanda global de fertilizantes potásicos en aumento</h2>
+      <p><strong>Marzo 2025</strong> — El precio del potasio se mantiene alto ante la creciente demanda en Asia y Sudamérica, lo que impulsa nuevas inversiones en extracción y refinamiento.</p>
+    </div>
+
+    <div class="news-card">
+      <img class="news-img" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=60" alt="Batería de iones de potasio en laboratorio">
+      <h2>10. Baterías con potasio: alternativa al litio</h2>
+      <p><strong>Febrero 2025</strong> — Investigadores exploran baterías de iones de potasio como opción más sostenible y económica que las de litio, con potencial para almacenamiento a gran escala.</p>
+    </div>
+  </div>
+</main>
+  <footer>
+    <p>&copy; 2025 Noticias sobre el Potasio. Desarrollado con 💚 para informar.</p>
+  </footer>
+
+<script src="../src/js/actualidad.js"></script> 
 </body>
 </html>
