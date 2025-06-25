@@ -1,0 +1,51 @@
+
+    <!-- Añadir dentro de <head> estas hojas de estilo:
+     <link rel="stylesheet" href="../src/css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->
+    <!-- HTML del menú de navegación:
+    -->
+    <header>
+        <div id="logo-container">
+            <a href="../index.html"><i id="arrow-left-header"></i>
+                <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
+            </a>
+        </div>
+        <nav class="topnav" id="myTopnav">
+            <ul>
+                <li><a href="../pages/que-soy.html">Qué soy</a></li>
+                <li><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
+                <li><a href="../pages/mi-importancia.html">Mi importancia</a></li>
+                <li><a href="../pages/curiosidades.html">Curiosidades</a></li>
+                <li><a href="../pages/actualidad.html">Actualidad</a></li>
+                <li><a href="../pages/creadoras.html">Creadoras</a></li>
+                <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                        <i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- HTML del footer con scripts:
+    -->
+    <footer>
+        <div id="footer-nav">
+            <ul>
+                <li><a href="../index.html"><i id="arrow-left-footer"></i>Inicio</a></li>
+                <li><a href="../pages/mi-importancia.html">Mi importancia<i id="arrow-right-footer"></i></a></li>
+            </ul>
+        </div>
+        <div id="footer-info">
+            <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+        </div>
+    </footer>
+    <script src="../src/js/script.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active y después el color amarillo de fondo en CSS / Con JQuery-->
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
