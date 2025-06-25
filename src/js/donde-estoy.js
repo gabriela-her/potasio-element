@@ -1,5 +1,4 @@
 // Carousel
-
 let slideIndex = 1;
 showSlides(slideIndex); // Cuando se muestra el carousel se sitúa en su index que se define como 1, la primera fruta
 
