@@ -136,6 +136,8 @@ body {
     color: #333;
 }
 
+/* NAV */
+/*
 header {
     width: 100%;
 }
@@ -216,6 +218,11 @@ nav ul li:hover {
     border-radius: 25px 25px 0 0;
 }
 
+#fa-bars-menu {
+    display: none;
+}
+*/
+/* MAIN */
 
 main>div {
     margin: 0% 10%;
@@ -225,6 +232,8 @@ p {
     line-height: 2;
 }
 
+/* CAROUSEL */
+
 #carousel-container p {
     width: 70%;
 }
@@ -232,6 +241,60 @@ p {
 #carousel {
     padding: 3%;
     text-align: center;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item>img {
+    width: auto;
+    max-height: 300px;
+}
+
+h5 {
+    position: relative;
+    left: 60%;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.message {
+    border-radius: 20px 20px 20px 0;
+    padding: 8px 15px;
+    position: relative;
+    left: 60%;
+    margin-bottom: 30px;
+    max-width: 300px;
+    background-color: #61B323;
+    color: #fff;
+}
+
+#carousel-nav {
+    text-align: center;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    padding: 10%;
+    color: #333;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.carousel-item-active,
+.dot:hover {
+    background-color: #61B323;
 }
 
 h2 {
@@ -276,9 +339,11 @@ h4 {
 }
 
 .card ul li::before {
-    content: "📌   ";
+    content: "-   ";
 }
 
+/* FOOTER */
+/*
 footer {
     position: sticky;
     width: 100%;
@@ -345,22 +410,72 @@ footer {
     -webkit-transform: rotate(315deg);
     vertical-align: sub;
 }
-
-/*Responsive Design*/
+*/
+/* RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 992px) {
-    nav ul li {
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid #333;
-    }
-
-    #arrow-left-header {
+    /* RESPONSIVE NAV */
+    /*
+     #arrow-left-header {
+        width: 15px;
+        height: 15px;
         margin-left: 1em;
     }
 
+    h1 {
+        font-size: 2em;
+    }
+
+     .topnav>ul>li:not(:first-child) {
+        display: none;
+    }
+
+    .topnav>ul>li#fa-bars-menu {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive li#fa-bars-menu a {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive>ul>li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    nav ul li:hover {
+        background-color: #fff;
+    }
+
+    .active {
+        background-color: #fff;
+        border-radius: 0;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+    */
+    /* RESPONSIVE CAROUSEL */
+
     #carousel-container p {
         width: 100%;
+    }
+
+    h5 {
+        left: 15%;
+    }
+
+    .message {
+        left: 15%;
     }
 
     #cards-container {
