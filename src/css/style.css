@@ -212,17 +212,18 @@ footer {
         border-bottom: none;
     }
 
-    .topnav>ul>li:not(:first-child) {
+     .topnav>ul>li:not(.active) {
         display: none;
+       
     }
 
-    .topnav>ul>li:first-child {
-        width: 80%;
+    .topnav>ul>li.active {
+        width: 100%;
     }
 
     .topnav>ul>li#fa-bars-menu {
         display: block;
-        background-color: rgba(250, 222, 82, 0.5);
+        
         position: absolute;
         right: 0;
         top: 0;
