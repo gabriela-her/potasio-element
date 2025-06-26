@@ -35,6 +35,7 @@ h2 {
 .pScrollDown {
     text-align: center;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .arrow-down {
@@ -61,8 +62,13 @@ h2 {
 }
 
 .carousel-item>img {
-    width: 20vw;
+    width: 25vw;
     margin-bottom: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.carousel-item>img:hover {
+    scale: 1.1;
 }
 
 h5 {
@@ -189,11 +195,13 @@ h4 {
     }
 
     .message {
-        left: 15%;
+        line-height: 1.2;
+        border-radius: 20px;
     }
 
     .carousel-item>img {
-        width: 70vw;
+        width: 60vw;
+        margin-top: 20px;
     }
 
     /* RESPONSIVE CARDS */
