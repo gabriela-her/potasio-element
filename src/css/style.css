@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+html {
+    overflow: auto;
+}
+
+>>>>>>> 821a3d43feff0a30e2eca25b6cc1a7f7e30f0780
 body {
   font-family: 'Kodchasan', sans-serif;
   margin: 0;
@@ -13,6 +29,7 @@ body {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .lado-izquierdo {
   flex-shrink: 0;
 }
@@ -40,6 +57,14 @@ ul.opciones li {
 
 ul.opciones li:hover {
   background-color: #f88c8c6f;
+=======
+/* NAV */
+#logo-container {
+    display: flex;
+    justify-content: left;
+    padding: 1em;
+    margin: 1% 0;
+>>>>>>> 821a3d43feff0a30e2eca25b6cc1a7f7e30f0780
 }
 
 .seleccionado {
@@ -57,6 +82,7 @@ ul.opciones li:hover {
 
 /* Mensaje de error emergente */
 
+<<<<<<< HEAD
 #error, .error {
   display: none;
   position: fixed;
@@ -83,3 +109,181 @@ ul.opciones li:hover {
   height: 120px;
   width: 120px;
 }
+=======
+#myTopnav {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background: none;
+    border-bottom: 1px solid #436436;
+}
+
+nav ul {
+    text-align: center;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    border-bottom: 4px solid #436436;
+    border-radius: 25px 25px 0 0;
+    margin: 0 3px;
+}
+
+#myTopnav ul li a {
+    display: inline-block;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.active {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#fa-bars-menu {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    position: sticky;
+    width: 100%;
+}
+
+#footer-nav ul {
+    text-align: center;
+}
+
+#footer-nav ul li {
+    display: inline-block;
+    border-radius: 10px;
+    margin: 3% 15%;
+    text-align: center;
+    width: 170px;
+    line-height: 60px;
+    padding: 10px 40px;
+}
+
+#footer-nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    display: block;
+    font-weight: bolder;
+}
+
+#footer-nav ul li:first-child {
+    background-color: #F88C8C;
+}
+
+#footer-nav ul li:nth-child(2) {
+    background-color: #436436;
+}
+
+#footer-info {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(201, 227, 172, 0.5);
+    border-top: 1px solid #C9E3AC;
+}
+
+#arrow-left-footer {
+    width: 10px;
+    height: 10px;
+    border: solid #ffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    vertical-align: sub;
+}
+
+#arrow-right-footer {
+    width: 10px;
+    height: 10px;
+    border: solid #ffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    vertical-align: sub;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media only screen and (min-width: 1380px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    #myTopnav ul li {
+        margin: 15px;
+    }
+
+    #myTopnav ul li {
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* RESPONSIVE NAV */
+    #arrow-left-header {
+        width: 15px;
+        height: 15px;
+        margin-left: 1em;
+    }
+
+    #pageTitle {
+        font-size: 2em;
+    }
+
+    #myTopnav ul li {
+        margin: 0;
+        border-bottom: none;
+    }
+
+    .topnav>ul>li:not(:first-child) {
+        display: none;
+    }
+
+    .topnav>ul>li:first-child {
+        width: 80%;
+    }
+
+    .topnav>ul>li#fa-bars-menu {
+        display: block;
+        background-color: rgba(250, 222, 82, 0.5);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20%;
+    }
+
+    #myTopnav ul li {
+        border-radius: 0;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive>ul>li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    #myTopnav ul {
+        text-align: left;
+    }
+}
+>>>>>>> 821a3d43feff0a30e2eca25b6cc1a7f7e30f0780
