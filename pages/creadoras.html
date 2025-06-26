@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/creadoras.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
     <title>Creadoras</title>
 </head>
 <body>
-  <header>
-    <nav>
-        <div class="nav-title">
-            <h1 class="page-title">Creadoras</h1>
-        </div> 
-    </nav>
-  </header>  
+    <header>
+        <div id="logo-container">
+            <a href="../index.html"><i id="arrow-left-header"></i>
+                <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
+            </a>
+        </div>
+        <nav class="topnav" id="myTopnav">
+            <ul>
+                <li id="que-soy-li-link"><a href="../pages/que-soy.html">Qué soy</a></li>
+                <li id="donde-estoy-li-link"><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
+                <li id="mi-importancia-li-link"><a href="../pages/mi-importancia.html">Mi importancia</a></li>
+                <li id="curiosidades-li-link"><a href="../pages/curiosidades.html">Curiosidades</a></li>
+                <li id="actualidad-li-link"><a href="../pages/actualidad.html">Actualidad</a></li>
+                <li id="creadoras-li-link"><a href="../pages/creadoras.html">Creadoras</a></li>
+                <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                        <i class="fa fa-bars" id="openMenu"></i>
+                    </a></li>
+            </ul>
+        </nav>
+    </header> 
   <main>
+    <h2 class="subtitle">Este proyecto ha sido creado por:</h2>
     <section class="cards-container">
         <article class="card-flip">
             <div class="card-inner">
                 <div class="card-front">
-                    <h2 class="name">Luisa Silva Matínez</h2>
-                    <img src="fotos/me.PNG" alt="me" class="lulupicture">
+                    <h2 class="name">Nicole Guevara</h2>
+                    <img src="../public/nicole.jpg" alt="me" class="nicole-picture">
                 </div>
                 <div class="card-back">
-                    <a href="https://www.linkedin.com/in/luisa-silva-martinez" target="_blank">
-                        <img src="fotos/linkedin.webp" class="linkpicture">
-                    <a href="mailto:luiasilvamartinez1999@gmail.com">
-                        <img src="fotos/email.avif" class="emailpicture">
+                    <a href="https://www.linkedin.com/in/nicole-guevara-gutierres-7160b236b/" target="_blank">
+                        <img src="../public/linkedin.webp" class="linkpicture">
+                        <p class="linkedin">linkedin</p>
                     </a>
+                    <a href="mailto:nicole.guevaragutierrez@gmail.com">
+                        <img src="../public/email.avif" class="emailpicture">
+                        <p class="email">nicole.guevaragutierrez@gmail.com</p>
                     </a>       
                 </div>
             </div>
@@ -36,14 +54,16 @@
             <div class="card-inner">
                 <div class="card-front">
                     <h2 class="name">Luisa Silva Matínez</h2>
-                    <img src="fotos/me.PNG" alt="me" class="lulupicture">
+                    <img src="../public/me.PNG" alt="me" class="lulupicture">
                 </div>
                 <div class="card-back">
                     <a href="https://www.linkedin.com/in/luisa-silva-martinez" target="_blank">
-                        <img src="fotos/linkedin.webp" class="linkpicture">
-                    <a href="mailto:luiasilvamartinez1999@gmail.com">
-                        <img src="fotos/email.avif" class="emailpicture">
+                        <img src="../public/linkedin.webp" class="linkpicture">
+                        <p class="linkedin">linkedin</p>
                     </a>
+                    <a href="mailto:luiasilvamartinez1999@gmail.com">
+                        <img src="../public/email.avif" class="emailpicture">
+                        <p class="email">luisasilvamartinez@gmail.com</p>
                     </a>       
                 </div>
             </div>
@@ -52,15 +72,17 @@
             <div class="card-inner">
                 <div class="card-front">
                     <h2 class="name">Luisa Silva Matínez</h2>
-                    <img src="fotos/me.PNG" alt="me" class="lulupicture">
+                    <img src="../public/me.PNG" alt="me" class="lulupicture">
                 </div>
                 <div class="card-back">
                     <a href="https://www.linkedin.com/in/luisa-silva-martinez" target="_blank">
-                        <img src="fotos/linkedin.webp" class="linkpicture">
-                    <a href="mailto:luiasilvamartinez1999@gmail.com">
-                        <img src="fotos/email.avif" class="emailpicture">
+                        <img src="../public/linkedin.webp" class="linkpicture">
+                        <p class="linkedin">linkedin</p>
                     </a>
-                    </a>       
+                    <a href="mailto:luiasilvamartinez1999@gmail.com">
+                        <img src="../public/email.avif" class="emailpicture">
+                        <p class="email">luisasilvamartinez@gmail.com</p>
+                    </a>      
                 </div>
             </div>
         </article>
@@ -68,15 +90,17 @@
             <div class="card-inner">
                 <div class="card-front">
                     <h2 class="name">Luisa Silva Matínez</h2>
-                    <img src="fotos/me.PNG" alt="me" class="lulupicture">
+                    <img src="../public/me.PNG" alt="me" class="lulupicture">
                 </div>
                 <div class="card-back">
                     <a href="https://www.linkedin.com/in/luisa-silva-martinez" target="_blank">
-                        <img src="fotos/linkedin.webp" class="linkpicture">
-                    <a href="mailto:luiasilvamartinez1999@gmail.com">
-                        <img src="fotos/email.avif" class="emailpicture">
+                        <img src="../public/linkedin.webp" class="linkpicture">
+                        <p class="linkedin">linkedin</p>
                     </a>
-                    </a>       
+                    <a href="mailto:luiasilvamartinez1999@gmail.com">
+                        <img src="../public/email.avif" class="emailpicture">
+                        <p class="email">luisasilvamartinez@gmail.com</p>
+                    </a>     
                 </div>
             </div>
         </article>
@@ -84,19 +108,44 @@
             <div class="card-inner">
                 <div class="card-front">
                     <h2 class="name">Luisa Silva Matínez</h2>
-                    <img src="fotos/me.PNG" alt="me" class="lulupicture">
+                    <img src="../public/me.PNG" alt="me" class="lulupicture">
                 </div>
                 <div class="card-back">
                     <a href="https://www.linkedin.com/in/luisa-silva-martinez" target="_blank">
-                        <img src="fotos/linkedin.webp" class="linkpicture">
-                    <a href="mailto:luiasilvamartinez1999@gmail.com">
-                        <img src="fotos/email.avif" class="emailpicture">
+                        <img src="../public/linkedin.webp" class="linkpicture">
+                        <p class="linkedin">linkedin</p>
                     </a>
-                    </a>       
+                    <a href="mailto:luiasilvamartinez1999@gmail.com">
+                        <img src="../public/email.avif" class="emailpicture">
+                        <p class="email">luisasilvamartinez@gmail.com</p>
+                    </a>     
                 </div>
             </div>
         </article>
     </section>
   </main>
+    <footer>
+        <div id="footer-nav">
+            <ul>
+                <li><a href="../que-soy.html"><i id="arrow-left-footer"></i>Qué soy</a></li>
+                <li><a href="../pages/mi-importancia.html">Mi importancia<i id="arrow-right-footer"></i></a></li>
+            </ul>
+        </div>
+        <div id="footer-info">
+            <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
+    <script src="../src/js/script.js"></script>
 </body>
 </html>
