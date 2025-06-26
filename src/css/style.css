@@ -73,7 +73,6 @@ a {
 
 nav ul {
     text-align: center;
-    
 }
 
 nav ul li {
@@ -82,16 +81,13 @@ nav ul li {
     border-radius: 25px 25px 0 0;
     margin: 0 3px;
     opacity: 0.85;
-    transition: 0.3s;
+    transition: all .5s ease-in-out;
 }
 
 nav ul li:hover {
     opacity: 1;
+    scale: 1.1;
 }
-/*
-nav ul li:hover:not(:nth-child(7)) {
-    opacity: 1;
-}*/
 
 #myTopnav ul li a {
     display: inline-block;
@@ -127,6 +123,11 @@ footer {
     width: 170px;
     line-height: 60px;
     padding: 10px 40px;
+    transition: all .5s ease-in-out;
+}
+
+#footer-nav ul li:hover {
+    scale: 1.1;
 }
 
 #footer-nav ul li a {
@@ -176,11 +177,14 @@ footer {
     vertical-align: sub;
 }
 
-
 /* RESPONSIVE DESIGN */
 @media only screen and (min-width: 1380px) {
     body {
         overflow-x: hidden;
+    }
+
+    nav ul {
+        padding-top: 7px;
     }
 }
 
@@ -212,9 +216,8 @@ footer {
         border-bottom: none;
     }
 
-     .topnav>ul>li:not(.active) {
+    .topnav>ul>li:not(.active) {
         display: none;
-       
     }
 
     .topnav>ul>li.active {
@@ -223,7 +226,7 @@ footer {
 
     .topnav>ul>li#fa-bars-menu {
         display: block;
-        
+
         position: absolute;
         right: 0;
         top: 0;
