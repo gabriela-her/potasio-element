@@ -12,20 +12,6 @@ body {
   line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  background-color: #4CAF50;
-  color: white;
-  padding: 40px 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
 main {
   margin-top: 30px;
   max-width: 900px;
@@ -150,59 +136,71 @@ footer {
 .naranja-mascota {
   width: 160px;
   height: 160px;
-  background: radial-gradient(circle at 50% 50%, #ffa500, #e67e22);
+  background: radial-gradient(circle at 40% 40%, #ffae00, #e67e22);
   border-radius: 50%;
   position: relative;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  animation: flotar 3s ease-in-out infinite;
   margin: 0 auto 10px;
+  box-shadow: inset -5px -8px 0 rgba(0, 0, 0, 0.05), 0 0 10px rgba(0,0,0,0.2);
+  animation: flotar 3s ease-in-out infinite;
+  border: 3px solid #d35400;
 }
 
-@keyframes flotar {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
+/* ojos más expresivos */
 .ojos {
   position: absolute;
-  top: 45px;
+  top: 48px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 0 25px;
+  padding: 0 30px;
 }
 
 .ojo {
   width: 20px;
   height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 3px #000;
+}
+
+.ojo::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
   background: #000;
   border-radius: 50%;
 }
 
+/* boca sonriente */
 .boca {
   width: 40px;
-  height: 20px;
-  background: #000;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  height: 25px;
+  border-bottom: 5px solid #000;
+  border-radius: 0 0 40px 40px;
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* hoja más detallada */
 .hojita {
-  width: 30px;
+  width: 35px;
   height: 20px;
-  background: #2ecc71;
+  background: linear-gradient(to right, #27ae60, #2ecc71);
   border-radius: 0 100% 0 100%;
-  transform: rotate(-45deg);
+  transform: rotate(-40deg);
   position: absolute;
-  top: -10px;
+  top: -15px;
   left: 50%;
-  margin-left: -15px;
+  margin-left: -17px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .opciones, .formulario {
@@ -244,4 +242,34 @@ canvas#confeti {
   width: 100vw;
   height: 100vh;
   z-index: 10000;
+}
+
+#notificacion {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e67e22;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 10001;
+}
+
+#notificacion.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.check-icon {
+  font-size: 20px;
+  color: #2ecc71;
 }
