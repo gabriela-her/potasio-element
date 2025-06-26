@@ -7,25 +7,30 @@
   <title>¿Estás en riesgo de déficit de potasio?</title>
   <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/css/mi-importancia.css" />
+  <link rel="style.css" href="../src/css/style.css">
 </head>
 
 <body>
-  <header>
+  ` <header>
     <div id="logo-container">
       <a href="../index.html"><i id="arrow-left-header"></i>
-        <h1><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
+        <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
       </a>
     </div>
-    <nav>
+    <nav class="topnav" id="myTopnav">
       <ul>
-        <li><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
-        <li><a href="../pages/mi-importancia.html">Mi importancia</a></li>
-        <li><a href="../pages/curiosidades.html">Curiosidades</a></li>
-        <li><a href="../pages/actualidad.html">Actualidad</a></li>
-        <li><a href="../pages/creadoras.html">Creadoras</a></li>
+        <li id="que-soy-li-link"><a href="../pages/que-soy.html">Qué soy</a></li>
+        <li id="donde-estoy-li-link"><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
+        <li id="mi-importancia-li-link"><a href="../pages/mi-importancia.html">Mi importancia</a></li>
+        <li id="curiosidades-li-link"><a href="../pages/curiosidades.html">Curiosidades</a></li>
+        <li id="actualidad-li-link"><a href="../pages/actualidad.html">Actualidad</a></li>
+        <li id="creadoras-li-link"><a href="../pages/creadoras.html">Creadoras</a></li>
+        <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+            <i class="fa fa-bars" id="openMenu"></i>
+          </a></li>
       </ul>
     </nav>
-  </header>
+  </header>`
 
   <main>
 
@@ -74,7 +79,8 @@
         </fieldset>
 
         <fieldset class="pregunta">
-          <legend>2. ¿Sientes calambres musculares sin razón aparente, especialmente después de caminar o dormir?</legend>
+          <legend>2. ¿Sientes calambres musculares sin razón aparente, especialmente después de caminar o dormir?
+          </legend>
           <label><input type="radio" name="calambres" value="no" required> No</label>
           <label><input type="radio" name="calambres" value="sometimes"> A veces</label>
           <label><input type="radio" name="calambres" value="si"> Sí</label>
@@ -110,11 +116,32 @@
 
   </main>
 
-  <footer>
+    <footer>
+      <div id="footer-nav">
+        <ul>
+          <li><a href="../que-soy.html"><i id="arrow-left-footer"></i>Qué soy</a></li>
+          <li><a href="../pages/mi-importancia.html">Mi importancia<i id="arrow-right-footer"></i></a></li>
+        </ul>
+      </div>
+      <div id="footer-info">
+        <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+      </div>
     <p>© 2025 Importancia del Potasio. Aprende, cuida y vive saludable.</p>
   </footer>
 
   <script src="../src/js/mi-importancia.js"></script>
+  `
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+  <script>
+    $(function () {
+      $('a').each(function () {
+        if ($(this).prop('href') == window.location.href) {
+          $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
+      });
+    });
+  </script>`
 </body>
 
 </html>
