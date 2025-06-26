@@ -11,7 +11,9 @@ opciones.forEach(opcion => {
 
     if (opcion.dataset.respuesta === "correcta") {
       opcion.classList.add("correcto");
-      alert("✅ ¡Correcto! Potasio es un metal alcalino.");
+      setTimeout(() => {
+        window.location.href = "/pages/que-soy.html";
+      }, 500); // medio segundo para que se vea el mensaje/efecto
     } else {
       opcion.classList.add("incorrecto");
       mostrarError();
@@ -30,24 +32,13 @@ function mostrarError() {
     reiniciarPregunta();
   }, 100);
 }
+
 function reiniciarPregunta() {
-  // Limpiar estados visuales
   opciones.forEach(o => {
     o.classList.remove('seleccionado', 'correcto', 'incorrecto');
   });
 
-  // Espera un pequeño tiempo para reiniciar, para evitar clics inmediatos
   setTimeout(() => {
     respondido = false;
-  }, 10); // reinicia el estado para permitir otra selección
+  }, 10);
 }
-
- // Responsive Nav
- function responsiveNav() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
