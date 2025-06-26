@@ -1,15 +1,4 @@
- // Responsive Nav
- function responsiveNav() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-
 // Carousel
-
 let slideIndex = 1;
 showSlides(slideIndex); // Cuando se muestra el carousel se sitúa en su index que se define como 1, la primera fruta
 

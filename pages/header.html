@@ -13,14 +13,14 @@
         </div>
         <nav class="topnav" id="myTopnav">
             <ul>
-                <li><a href="../pages/que-soy.html">Qué soy</a></li>
-                <li><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
-                <li><a href="../pages/mi-importancia.html">Mi importancia</a></li>
-                <li><a href="../pages/curiosidades.html">Curiosidades</a></li>
-                <li><a href="../pages/actualidad.html">Actualidad</a></li>
-                <li><a href="../pages/creadoras.html">Creadoras</a></li>
+                <li id="que-soy-li-link"><a href="../pages/que-soy.html">Qué soy</a></li>
+                <li id="donde-estoy-li-link"><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
+                <li id="mi-importancia-li-link"><a href="../pages/mi-importancia.html">Mi importancia</a></li>
+                <li id="curiosidades-li-link"><a href="../pages/curiosidades.html">Curiosidades</a></li>
+                <li id="actualidad-li-link"><a href="../pages/actualidad.html">Actualidad</a></li>
+                <li id="creadoras-li-link"><a href="../pages/creadoras.html">Creadoras</a></li>
                 <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-                        <i class="fa fa-bars"></i></a></li>
+                        <i class="fa fa-bars" id="openMenu"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -29,8 +29,8 @@
     <footer>
         <div id="footer-nav">
             <ul>
-                <li><a href="../index.html"><i id="arrow-left-footer"></i>Inicio</a></li>
-                <li><a href="../pages/mi-importancia.html">Mi importancia<i id="arrow-right-footer"></i></a></li>
+                <li><a href=""><i id="arrow-left-footer"></i>Nombre de la página anterior</a></li>
+                <li><a href="">Nombre de la página siguiente<i id="arrow-right-footer"></i></a></li>
             </ul>
         </div>
         <div id="footer-info">
@@ -39,7 +39,7 @@
     </footer>
     <script src="../src/js/script.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active y después el color amarillo de fondo en CSS / Con JQuery-->
+    <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
     <script>
         $(function () {
             $('a').each(function () {

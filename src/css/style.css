@@ -84,87 +84,7 @@ ul.opciones li:hover {
   width: 120px;
 }
 /* RESET CSS */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -172,19 +92,8 @@ video {
     font: inherit;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+html {
+    overflow: auto;
 }
 
 body {
@@ -196,33 +105,9 @@ ul {
     list-style: none;
 }
 
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
 /* NAV */
-
-header {
-    width: 100%;
-}
-
 #logo-container {
     display: flex;
-    align-items: left;
     justify-content: left;
     padding: 1em;
     margin: 1% 0;
@@ -268,32 +153,31 @@ a {
     height: auto;
     overflow: hidden;
     background: none;
-    border-bottom: 1px solid #000;
-}
-
-.active {
-    background-color: #FADE52;
-    border-radius: 25px 25px 0 0;
+    border-bottom: 1px solid #436436;
 }
 
 nav ul {
     text-align: center;
+    
 }
 
 nav ul li {
     display: inline-block;
+    border-bottom: 4px solid #436436;
+    border-radius: 25px 25px 0 0;
+    margin: 0 3px;
 }
 
 #myTopnav ul li a {
     display: inline-block;
-    padding: 1em 3em;
+    padding: 1em 2em;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-#myTopnav ul li:hover {
-    background-color: rgba(250, 222, 82, 0.5);
-    border-radius: 25px 25px 0 0;
+.active {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #fa-bars-menu {
@@ -301,7 +185,6 @@ nav ul li {
 }
 
 /* FOOTER */
-
 footer {
     position: sticky;
     width: 100%;
@@ -319,7 +202,6 @@ footer {
     width: 170px;
     line-height: 60px;
     padding: 10px 40px;
-
 }
 
 #footer-nav ul li a {
@@ -371,11 +253,26 @@ footer {
 
 
 /* RESPONSIVE DESIGN */
+@media only screen and (min-width: 1380px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    #myTopnav ul li {
+        margin: 15px;
+    }
+
+    #myTopnav ul li {
+        border-radius: 25px;
+    }
+}
 
 @media only screen and (max-width: 992px) {
+
     /* RESPONSIVE NAV */
-    
-     #arrow-left-header {
+    #arrow-left-header {
         width: 15px;
         height: 15px;
         margin-left: 1em;
@@ -385,38 +282,40 @@ footer {
         font-size: 2em;
     }
 
-     .topnav>ul>li:not(:first-child) {
+    #myTopnav ul li {
+        margin: 0;
+        border-bottom: none;
+    }
+
+    .topnav>ul>li:not(:first-child) {
         display: none;
     }
 
+    .topnav>ul>li:first-child {
+        width: 80%;
+    }
+
     .topnav>ul>li#fa-bars-menu {
-        float: right;
         display: block;
+        background-color: rgba(250, 222, 82, 0.5);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20%;
+    }
+
+    #myTopnav ul li {
+        border-radius: 0;
     }
 
     .topnav.responsive {
         position: relative;
     }
 
-    .topnav.responsive li#fa-bars-menu a {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
     .topnav.responsive>ul>li {
         float: none;
         display: block;
         text-align: left;
-    }
-
-    #myTopnav ul li:hover {
-        background-color: #fff;
-    }
-
-    .active {
-        background-color: #fff;
-        border-radius: 0;
     }
 
     #myTopnav ul {
