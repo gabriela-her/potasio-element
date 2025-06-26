@@ -15,18 +15,12 @@ html {
 
 >>>>>>> 821a3d43feff0a30e2eca25b6cc1a7f7e30f0780
 body {
-  font-family: 'Kodchasan', sans-serif;
-  margin: 0;
-  padding: 20px;
+    line-height: 1;
 }
 
-.contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  height: 100vh;
-  box-sizing: border-box;
+ol,
+ul {
+    list-style: none;
 }
 
 <<<<<<< HEAD
