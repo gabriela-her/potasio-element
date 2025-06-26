@@ -81,18 +81,28 @@ nav ul li {
     border-bottom: 4px solid #436436;
     border-radius: 25px 25px 0 0;
     margin: 0 3px;
+    opacity: 0.85;
+    transition: 0.3s;
 }
+
+nav ul li:hover {
+    opacity: 1;
+}
+/*
+nav ul li:hover:not(:nth-child(7)) {
+    opacity: 1;
+}*/
 
 #myTopnav ul li a {
     display: inline-block;
     padding: 1em 2em;
-    text-decoration: none;
     font-size: 1.2em;
 }
 
 .active {
     text-transform: uppercase;
     font-weight: bold;
+    opacity: 1;
 }
 
 #fa-bars-menu {
