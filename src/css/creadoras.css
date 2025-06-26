@@ -4,22 +4,16 @@
   box-sizing: border-box;
 }
 body {
-    background-color: #61B323;
-    background-image: url(/public/aguacates.PNG);
+    background-color: white;
+    font-family: kodchasan, sans-serif;
 }
-h1 {
+h2 {
   font-size: 30px;
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: kodchasan, sans-serif;
   color: white;
   -webkit-text-stroke: 1px #436436;
   margin-top: 5%;
-}
-nav {
-  background-image: url(/public/aguacates.PNG);
-  height: 120px;
-  padding: 2rem;
-  
 }
 .card {
     text-align: center;
@@ -82,7 +76,7 @@ nav {
 }
 h2 {
     color: #436436;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: kodchasan, sans-serif;
     text-align: center;
     font-size: 15px;
     padding: 10px;
