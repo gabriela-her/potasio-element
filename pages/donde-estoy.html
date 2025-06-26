@@ -14,7 +14,6 @@
         href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="icon" type="image/png" href="../public/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="../public/favicon/favicon.svg">
     <link rel="shortcut icon" href="../public/favicon/favicon.ico">
@@ -49,31 +48,38 @@
     <main>
         <div id="carousel-container">
             <h2>Dónde estoy</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ante a sem scelerisque, sit amet
-                fringilla diam condimentum. Proin elit nulla, vestibulum nec maximus eget, mattis nec leo. Suspendisse
-                tristique iaculis tortor nec consequat.
+            <p id="pIntro">¡Hola! Soy el potasio, un mineral esencial que ayuda a que tus músculos, nervios y corazón
+                funcionen bien. Me puedes encontrar en frutas deliciosas como el plátano, la naranja, el aguacate y las
+                fresas. Cada vez que me consumes, te ayudo a mantener el equilibrio de los líquidos en tu cuerpo y a
+                sentirte con más energía. ¡No me olvides, me necesitas más de lo que crees!
             </p>
+            <p class="pScrollDown"><a href="#foodCarousel">Haz click aquí para comenzar y ver dónde me puedes
+                    encontrar<br>
+                    <i class="arrow-down"></i></a></p>
             <div id="carousel">
-                <div class="carousel-item">
+                <div class="carousel-item" id="foodCarousel">
                     <h5>Plátanos</h5>
                     <p class="message">
-                        Mensaje de por qué es importante
+                        El plátano es una excelente fuente de potasio, clave para músculos, nervios y presión arterial.
+                        Además, es fácil de consumir y muy energético.
                     </p>
-                    <img src="../public/bananas.png" alt="Bananas">
+                    <img src="../public/banana-carousel.png" alt="Bananas">
                 </div>
                 <div class="carousel-item">
                     <h5>Espinacas</h5>
                     <p class="message">
-                        Mensaje de por qué es importante
+                        La espinaca aporta potasio, esencial para músculos y nervios. También es baja en calorías y rica
+                        en nutrientes.
                     </p>
                     <img src="../public/espinaca.jpg" alt="Espinacas">
                 </div>
                 <div class="carousel-item">
                     <h5>Aguacate</h5>
                     <p class="message">
-                        Mensaje de por qué es importante
+                        El aguacate es rico en potasio, que ayuda a regular músculos y presión arterial. También aporta
+                        grasas saludables y fibra.
                     </p>
-                    <img src="../public/avocado.jpg" alt="Aguacate">
+                    <img src="../public/aguacate-carousel.png" alt="Aguacate">
                 </div>
             </div>
             <div id="carousel-nav">
@@ -82,10 +88,12 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <p class="pScrollDown"><a href="#foodCards">Continúa para ver más alimentos<br>
+                        <i class="arrow-down"></i></a></p>
             </div>
 
         </div>
-        <div>
+        <div id="foodCards">
             <h3>Alimentación</h3>
             <div id="cards-container">
                 <article class="card">
