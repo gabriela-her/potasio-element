@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noticias sobre el Potasio</title>
+  <link rel="stylesheet" href="../src/css/actualidad.css">
+  <link rel="stylesheet" href="../src/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div id="logo-container">
+      <a href="../index.html"><i id="arrow-left-header"></i>
+        <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
+      </a>
+    </div>
+    <nav class="topnav" id="myTopnav">
+      <ul>
+        <li id="que-soy-li-link"><a href="../pages/que-soy.html">Qué soy</a></li>
+        <li id="donde-estoy-li-link"><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
+        <li id="mi-importancia-li-link"><a href="../pages/mi-importancia.html">Mi importancia</a></li>
+        <li id="curiosidades-li-link"><a href="../pages/curiosidades.html">Curiosidades</a></li>
+        <li id="actualidad-li-link"><a href="../pages/actualidad.html">Actualidad</a></li>
+        <li id="creadoras-li-link"><a href="../pages/creadoras.html">Creadoras</a></li>
+        <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+            <i class="fa fa-bars" id="openMenu"></i>
+          </a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="asistente-container">
+
+    <div class="burbuja" id="burbuja">
+      ¿Quisieras que te enviara las proximas noticias a tu correo?
+    </div>
+
+    <div class="naranja-mascota" aria-label="Mascota asistente naranja" role="img">
+      <div class="ojos">
+        <div class="ojo ojo-izq"></div>
+        <div class="ojo ojo-der"></div>
+      </div>
+      <div class="boca"></div>
+      <div class="hojita"></div>
+    </div>
+
+    <div class="opciones">
+      <button onclick="mostrarFormulario()">Sí</button>
+      <button onclick="decirNo()">No</button>
+    </div>
+
+    <div class="formulario" id="formulario" style="display:none;">
+      <input type="email" id="correo" placeholder="Tu correo electrónico" required />
+      <button onclick="enviarCorreo()">Enviar</button>
+    </div>
+
+    <canvas id="confeti"></canvas>
+  </div>
+  <main>
+    <div class="news-grid">
+      <div class="news-card">
+        <img class="news-img" src="../file/planta de michigan.png">
+        <h2>Nueva planta de potasa en Michigan recibe apoyo federal</h2>
+        <p><strong>Junio 2025</strong> — El Departamento de Energía de EE.UU. otorgó un préstamo de $1.260 millones para
+          construir una planta de potasa que producirá 800 000 toneladas anuales y generará 1 600 empleos.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img" src="../file/platano clave para controlar la presion arterial.jpg"
+          alt="Plátanos frescos en rama">
+        <h2>Plátano: clave para controlar la presión arterial</h2>
+        <p><strong>Mayo 2025</strong> — Estudios recientes muestran que un plátano diario (422 mg de potasio) ayuda a
+          eliminar sodio a través de los riñones y reduce la presión arterial.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img" src="../file/potasio mas eficaz para reducir el sodio.jpg"
+          alt="Laboratorio científico con tubos de ensayo">
+        <h2>Potasio más eficaz que reducir sodio</h2>
+        <p><strong>Mayo 2025</strong> — Investigadores demostraron que elevar el consumo de potasio puede reducir la
+          presión arterial incluso sin disminuir el sodio, gracias a la acción renal y vascular.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img" src="../file/potasio reduce riesgo de infarto y acv.jpeg"
+          alt="Corazón saludable ilustración">
+        <h2>Potasio reduce riesgo de infarto y ACV</h2>
+        <p><strong>Abril 2025</strong> — Un estudio encontró que dietas ricas en potasio reducen el riesgo de infarto en
+          un 39 %, ACV en un 14 % y muertes en un 21 %, especialmente si se sustituye la sal común por sal potásica.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img" src="../file/OMS.jpeg" alt="Sal enriquecida con potasio en cucharilla">
+        <h2>OMS recomienda sal enriquecida con potasio</h2>
+        <p><strong>Abril 2025</strong> — La OMS promueve el uso de sal con cloruro de potasio (25 %) para reducir la
+          hipertensión sin aumentar el riesgo de efectos secundarios como la hiperpotasemia.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img" src="../file/impacto ambiental.png" alt="Investigadores científicos analizando datos">
+        <h2>Impacto global del potasio en salud pública</h2>
+        <p><strong>Abril 2025</strong> — El estudio SSaSS, con más de 20 000 participantes, mostró que sustituir sal
+          común por potásica reduce ACV, eventos cardiovasculares y mortalidad total.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img"
+          src="https://images.unsplash.com/photo-1590080877777-c87d44b15d5b?auto=format&fit=crop&w=600&q=60"
+          alt="Instalaciones de planta de producción de potasa">
+        <h2>8. USDA otorga $80 millones a planta potásica</h2>
+        <p><strong>Abril 2025</strong> — El Departamento de Agricultura de EE.UU. financia con $80 millones la planta de
+          potasa en Osceola, fortaleciendo la producción nacional de fertilizantes.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img"
+          src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=600&q=60"
+          alt="Fertilizantes agrícolas">
+        <h2>Demanda global de fertilizantes potásicos en aumento</h2>
+        <p><strong>Marzo 2025</strong> — El precio del potasio se mantiene alto ante la creciente demanda en Asia y
+          Sudamérica, lo que impulsa nuevas inversiones en extracción y refinamiento.</p>
+      </div>
+
+      <div class="news-card">
+        <img class="news-img"
+          src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=60"
+          alt="Batería de iones de potasio en laboratorio">
+        <h2>Baterías con potasio: alternativa al litio</h2>
+        <p><strong>Febrero 2025</strong> — Investigadores exploran baterías de iones de potasio como opción más
+          sostenible y económica que las de litio, con potencial para almacenamiento a gran escala.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="footer-nav">
+      <ul>
+        <li><a href="../que-soy.html"><i id="arrow-left-footer"></i>Qué soy</a></li>
+        <li><a href="../pages/mi-importancia.html">Mi importancia<i id="arrow-right-footer"></i></a></li>
+      </ul>
+    </div>
+    <div id="footer-info">
+      <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+    </div>
+  </footer>
+
+  <div id="notificacion" class="notificacion-oculta">
+    <span class="check-icon">✔️</span>
+    <span id="mensaje-notificacion">¡Correo registrado con éxito!</span>
+  </div>
+  <script src="../src/js/actualidad.js"></script>
+  <script src="../src/js/script.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+  <script>
+    $(function () {
+      $('a').each(function () {
+        if ($(this).prop('href') == window.location.href) {
+          $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
+      });
+    });
+  </script>`
+</body>
+
+</html>
+>>>>>>> 6780492d71afb31af82595754f26b11a7f5cd072
