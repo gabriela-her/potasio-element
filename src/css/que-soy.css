@@ -1,7 +1,7 @@
 /* Fuente y reset básico */
 body {
   margin: 0;
-  padding: 20px;
+  /*padding: 20px;*/
   font-family: 'Kodchasan', sans-serif;
   background-color: #fff;
 }
