@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creadoras</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K19</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style-index.css" />
 </head>
 <body>
+
+  <!-- Letrero de error emergente -->
+ <div id="mensaje-error" class="error" style="display: none;">
+  <span>❌ VUELVE A INTENTARLO</span>
+  <img src="/public/error.PNG" alt="Icono error" />
+ 
+</div>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor">
+    <!-- Imagen de la pregunta -->
+    <div class="lado-izquierdo">
+      <img src="/public/img-q1.PNG" alt="Símbolo K" class="imagen-k">
+    </div>
+
+    <!-- Opciones de respuesta -->
+    <ul class="opciones">
+      <li data-respuesta="correcta">Potasio</li>
+      <li>Plata</li>
+      <li>Plomo</li>
+    </ul>
+  </div>
+
+  <script src="/src/js/scriptindex.js"></script>
 </body>
 </html>
