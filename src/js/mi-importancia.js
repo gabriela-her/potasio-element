@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const frutas = form.elements["frutas"].value;
-    const diureticos = form.elements["diureticos"].value;
+    const calambres = form.elements["calambres"].value;
     const ejercicio = form.elements["ejercicio"].value;
     const estimulantes = form.elements["estimulantes"].value;
 
@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (frutas === "media") score += 1;
     else if (frutas === "baja") score += 2;
 
-    if (diureticos === "si") score += 2;
+    if (calambres === "si") score += 1;
+    else if (calambres === "no") score += 2;
 
     if (ejercicio === "frecuente") score += 1;
     else if (ejercicio === "nunca") score += 2;
@@ -88,14 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
     encuesta.style.display = 'none';
 
     if (score <= 2) {
-      nivel.textContent = "Bajo riesgo 🟢";
-      recomendacion.textContent = "¡Bien hecho! Tu estilo de vida parece saludable. Sigue así y mantén una dieta rica en potasio.";
+      nivel.textContent = "Potasio y tu son besties";
+      recomendacion.textContent = "Tú y el potasio son inseparables. Tu cuerpo te agradece esa dieta rica y balanceada. ¡Sigue así! El potasio está feliz de estar en tu equipo. 🌟🍌";
     } else if (score <= 5) {
-      nivel.textContent = "Riesgo moderado 🟠";
-      recomendacion.textContent = "Podrías mejorar tu ingesta de potasio. Incorpora más frutas, vegetales y bebe agua regularmente.";
+      nivel.textContent = "¡¡Atencion!! una amistad con altibajos";
+      recomendacion.textContent = "Tienen una buena relación, pero hay días en los que el potasio se siente un poco ignorado. Añade más alimentos ricos en potasio, mas agua y algo de ejercicio y verás cómo esa amistad se fortalece de nuevo. 🥦💚";
     } else {
-      nivel.textContent = "Alto riesgo 🔴";
-      recomendacion.textContent = "Tu estilo de vida podría estar afectando tus niveles de potasio. Consulta a un nutricionista y revisa tus hábitos alimenticios.";
+      nivel.textContent = "Alerta roja, tu relacion con el potasio esta en crisis";
+      recomendacion.textContent = "Tu relación con el potasio está pasando por un mal momento… casi no se ven, y tu cuerpo lo nota. Pero no te preocupes, ¡toda amistad se puede recuperar! Vuelve a incluirlo en tu vida con frutas, verduras y buenos hábitos. Él te perdona. 🍌🥺💥";
     }
 
     resultado.scrollIntoView({ behavior: "smooth" });
