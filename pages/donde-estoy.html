@@ -48,14 +48,20 @@
     <main>
         <div id="carousel-container">
             <h2>Dónde estoy</h2>
-            <p id="pIntro">¡Hola! Soy el potasio, un mineral esencial que ayuda a que tus músculos, nervios y corazón
-                funcionen bien. Me puedes encontrar en frutas deliciosas como el plátano, la naranja, el aguacate y las
-                fresas. Cada vez que me consumes, te ayudo a mantener el equilibrio de los líquidos en tu cuerpo y a
-                sentirte con más energía. ¡No me olvides, me necesitas más de lo que crees!
-            </p>
+            <div id="divIntro">
+                <p id="pIntro">¡Hola! Soy el potasio, un mineral esencial que ayuda a que tus músculos, nervios y
+                    corazón
+                    funcionen bien. Me puedes encontrar en frutas deliciosas como el plátano, la naranja, el aguacate y
+                    las
+                    fresas. Cada vez que me consumes, te ayudo a mantener el equilibrio de los líquidos en tu cuerpo y a
+                    sentirte con más energía. ¡No me olvides, me necesitas más de lo que crees!
+                </p>
+                <img src="../public/potassium-food.png" alt="alimentos con potasio" id="introImg">
+            </div>
             <p class="pScrollDown" onclick="scrollDown1()">Haz click aquí para comenzar y ver dónde me puedes
-                    encontrar<br>
-                    <i class="arrow-down"></i></p>
+                encontrar<br>
+                <i class="arrow-down"></i>
+            </p>
             <div id="carousel">
                 <div class="carousel-item" id="foodCarousel">
                     <h5>Plátanos</h5>
@@ -89,7 +95,8 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 <p class="pScrollDown" onclick="scrollDown2()">Continúa para ver más alimentos<br>
-                        <i class="arrow-down"></i></p>
+                    <i class="arrow-down"></i>
+                </p>
             </div>
         </div>
         <div id="foodCards">
