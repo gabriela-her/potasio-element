@@ -33,6 +33,10 @@
         <h2>VAMOS A JUGAR: ¿VERDADERO O FALSO?</h2>
             <p class="subtitle">Haz click en las afirmaciones sobre el potasio que creas que son correctas.</p>
     </section>
+    <section class="timer">
+        <p id="timer">Tiempo: 30</p>
+        <p id="score">Puntos: 0</p>
+    </section>
     <section class="cards-container">
         <article class="card" data-truth="true">
             <p>El potasio  reacciona con el agua, explota y arde con una llama lila por la rápida liberación de hidrógeno.</p>
@@ -80,7 +84,7 @@
         <div id="video-modal"       style="display:none;">
             <div class="modal-meme-content">
                 <button id="cerrar-video">✖</button>
-                <video id="potasio-video" controls width="100%" autoplay>
+                <video id="potasio-video" controls width="100%">
                  <source src="../public/video/potasiovideo.mp4" type="video/mp4">
                  </video>
             </div>
