@@ -1,4 +1,8 @@
 /* CUSTOM STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Kodchasan', sans-serif;
     background-color: #ffff;
@@ -15,8 +19,34 @@ p {
 }
 
 /* CAROUSEL */
-#carousel-container p {
+h2 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+    color: #333;
+}
+
+#pIntro {
     width: 70%;
+    margin-bottom: 50px;
+}
+
+.pScrollDown {
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    width: 25px;
+    height: 25px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 #carousel {
@@ -32,15 +62,19 @@ p {
 }
 
 .carousel-item>img {
-    width: 40vw;
+    width: 25vw;
+    margin-bottom: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.carousel-item>img:hover {
+    scale: 1.1;
 }
 
 h5 {
-    position: relative;
-    left: 60%;
-    padding-left: 15px;
-    margin-bottom: 5px;
-    text-align: left;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .message {
@@ -48,44 +82,64 @@ h5 {
     padding: 8px 15px;
     position: sticky;
     left: 60%;
-    margin-bottom: 30px;
     max-width: 300px;
     background-color: #61B323;
     color: #fff;
+    text-align: left;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 #carousel-nav {
     text-align: center;
+    margin-top: 5px;
 }
 
 .prev,
 .next {
     cursor: pointer;
-    padding: 10%;
+    margin: 0 20px;
     color: #333;
+    font-size: 2em;
 }
 
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
 }
 
-.carousel-item-active,
-.dot:hover {
+.carousel-item-active {
     background-color: #61B323;
 }
 
-h2 {
-    text-align: left;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 1em 0;
-    color: #333;
+.dot:hover {
+    background-color: rgba(248, 140, 140, 0.7);
+}
+
+.prev:hover,
+.next:hover {
+    color: rgba(248, 140, 140, 0.7);
+}
+
+
+#carousel {
+    padding: 20px;
+    background-color: rgba(250, 222, 82, 0.1);
+    border: 1px solid rgba(250, 222, 82, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#carousel-nav {
+    margin: 20px 0px 50px 0px;
+}
+
+#carousel-nav p {
+    margin-top: 30px;
 }
 
 /* CARDS */
@@ -130,8 +184,9 @@ h4 {
 
 /* RESPONSIVE DESIGN */
 @media only screen and (max-width: 992px) {
+
     /* RESPONSIVE CAROUSEL */
-    #carousel-container p {
+    #pIntro {
         width: 100%;
     }
 
@@ -140,11 +195,13 @@ h4 {
     }
 
     .message {
-        left: 15%;
+        line-height: 1.2;
+        border-radius: 20px;
     }
 
     .carousel-item>img {
-        width: 70vw;
+        width: 60vw;
+        margin-top: 20px;
     }
 
     /* RESPONSIVE CARDS */
