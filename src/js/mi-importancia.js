@@ -86,21 +86,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if (estimulantes === "si") score += 2;
 
     resultado.classList.remove("oculto");
-    encuesta.style.display = 'none';
+    encuesta.classList.add('oculto');
 
     if (score <= 2) {
-      nivel.textContent = "Potasio y tu son besties";
-      recomendacion.textContent = "Tú y el potasio son inseparables. Tu cuerpo te agradece esa dieta rica y balanceada. ¡Sigue así! El potasio está feliz de estar en tu equipo. 🌟🍌";
+      nivel.textContent = "Potasio y tú son besties";
+      recomendacion.textContent = "Tu cuerpo te agradece esa dieta rica y balanceada. ¡Sigue así! 🌟🍌";
     } else if (score <= 5) {
-      nivel.textContent = "¡¡Atencion!! una amistad con altibajos";
-      recomendacion.textContent = "Tienen una buena relación, pero hay días en los que el potasio se siente un poco ignorado. Añade más alimentos ricos en potasio, mas agua y algo de ejercicio y verás cómo esa amistad se fortalece de nuevo. 🥦💚";
+      nivel.textContent = "¡Atención! Amistad con altibajos";
+      recomendacion.textContent = "Más potasio y buenos hábitos te harán mejores amigos 🥦💚";
     } else {
-      nivel.textContent = "Alerta roja, tu relacion con el potasio esta en crisis";
-      recomendacion.textContent = "Tu relación con el potasio está pasando por un mal momento… casi no se ven, y tu cuerpo lo nota. Pero no te preocupes, ¡toda amistad se puede recuperar! Vuelve a incluirlo en tu vida con frutas, verduras y buenos hábitos. Él te perdona. 🍌🥺💥";
+      nivel.textContent = "Alerta roja: relación en crisis";
+      recomendacion.textContent = "Inclúyelo más en tu dieta. Él te perdona 🍌🥺💥";
     }
 
     resultado.scrollIntoView({ behavior: "smooth" });
   });
 
+  // Mostrar la primera pregunta al cargar
   mostrarPregunta(indiceActual);
+
+  // Volver al inicio del cuestionario
+  document.getElementById('btnVolverInicio').addEventListener('click', () => {
+    resultado.classList.add('oculto');
+    encuesta.classList.remove('oculto');
+
+    const inputs = document.querySelectorAll('input[type="radio"]');
+    inputs.forEach(input => input.checked = false);
+
+    indiceActual = 0;
+    mostrarPregunta(indiceActual); // 🔧 Esta línea es clave
+  });
 });

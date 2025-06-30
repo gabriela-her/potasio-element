@@ -18,8 +18,8 @@ body {
 
 
 .seccion-potencia {
-  padding: 60px 40px;
-  background-color: #229c41;
+  padding: 30px 40px;
+  background-color: white;
   border-radius: 20px;
   margin-bottom: 40px;
 }
@@ -39,13 +39,13 @@ body {
 
 .titulo-potencia {
   font-size: 2rem;
-  color: white;
+  color: black;
   margin-bottom: 20px;
   line-height: 1.4;
 }
 
 .texto-potencia p {
-  font-size: 1.2rem;
+  font-size: 1 rem;
   line-height: 1.9;
   color: #333;
 }
@@ -87,7 +87,7 @@ body {
   width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  border-radius: 250px;
+  border-radius: 20px;
   animation: palpitar 1.5s infinite ease-in-out, resplandor 2s infinite ease-in-out;
 }
 
@@ -113,10 +113,10 @@ body {
 
 @keyframes resplandor {
   0%, 100% {
-    box-shadow: 0 0 20px #a7ff83, 0 0 30px #17c964;
+    box-shadow: 0 0 20px #a2ea85, 0 0 30px #6ecb7a;
   }
   50% {
-    box-shadow: 0 0 50px #ec5db0, 0 0 60px #17c964;
+    box-shadow: 0 0 50px yellow, 0 0 60px #5ed893;
   }
 }
 
@@ -162,7 +162,7 @@ body {
 
 
 .evaluacion-potasio {
-  background: #F88C8C;
+  background: #f88c8c7e;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -177,6 +177,7 @@ body {
   font-size: 1.8rem;
   color: #f7f9f7;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 fieldset.pregunta {
@@ -203,6 +204,7 @@ fieldset.pregunta.activa {
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
+  line-height: 1.8rem;
 }
 
 .pregunta label {
@@ -215,7 +217,7 @@ fieldset.pregunta.activa {
   gap: 20px;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .botones button {
@@ -233,16 +235,46 @@ fieldset.pregunta.activa {
   background-color: #43cf63;
 }
 
+
+
 #resultado {
-  background-color: #fff3f8;
-  padding: 40px;
-  border-radius: 20px;
-  max-width: 700px;
-  margin: 50px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.868);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 #resultado.oculto {
-  display: none;
+  display: none !important;
+}
+
+#btnVolverInicio {
+  padding: 10px 20px;
+  margin: 20px auto 0 auto;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  max-width: 200px;
+  transition: background-color 0.3s ease;
+}
+
+#btnVolverInicio:hover {
+  background-color: #43cf63;
 }
 
