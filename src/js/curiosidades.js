@@ -13,6 +13,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const cerrarVideo = document.getElementById("cerrar-video");
     const video = document.getElementById("potasio-video");
 
+    let time = 30;
+    let interval;
+    let points = 0;
+    let successes = 0;
+    const totalSuccesses = document.querySelectorAll('[data-truth="true"]').length;
+
+
+    function iniciarTemporizador() {
+        const timer = document.getElementById("timer");
+        timer.textContent = `Tiempo: ${time}`;
+        
+        interval = setInterval(() => {
+            time--;
+            timer.textContent = `Tiempo: ${time}`;
+            if (time <= 0) {
+                clearInterval(interval);
+                finishGame("¡Tiempo agotado!");
+            }
+        }, 1000);
+    }
+    function finishGame(message) {
+        modalTitle.textContent = message;
+        modalText.textContent = `Tu puntuación fue: ${points}`;
+        modal.style.display = "flex";
+        confetti({
+            particleCount: 200,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+    }
     verMemeBtn.addEventListener("click", () => {
         videoModal.style.display = "block";
         video.currentTime = 0;
@@ -22,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cerrarVideo.addEventListener("click", () => {
         videoModal.style.display = "none";
         video.pause();
+        video.currentTime = 0;
     });
 
     window.addEventListener("click", (e) => {
@@ -30,51 +61,63 @@ document.addEventListener("DOMContentLoaded", () => {
              video.pause();
          }
   });
-
     reiniciarButton.addEventListener("click", () => {
-        cards.forEach(card => {
-            card.classList.remove("correct", "incorrect");
-            card.style.borderColor = "";
-        });
-        modal.style.display = "none";
+    cards.forEach(card => {
+        card.classList.remove("correct", "incorrect");
+        card.style.borderColor = "";
     });
 
+    modal.style.display = "none";
+    clearInterval(interval); 
+    time = 30;
+    points = 0;
+    successes = 0;
+    iniciarTemporizador(); 
+});
+
     cards.forEach(card => {
-        card.addEventListener("click", (e) => {
-            card.classList.add("clicked");
-            setTimeout(() => {
-             card.classList.remove("clicked");         
-            }, 300);
+    card.addEventListener("click", () => {
+        if (card.classList.contains("correct") || card.classList.contains("incorrect")) return;
 
-             const isTrue = card.getAttribute("data-truth") === "true";
-             const isExplosionCard = card.textContent.includes("reacciona con el agua");
+        card.classList.add("clicked");
+        setTimeout(() => {
+            card.classList.remove("clicked");         
+        }, 300);
 
-            if (isTrue) {
-             card.classList.add("correct");
-             card.style.borderColor =" #4caf50" ;
-             modalTitle.textContent = "¡CORRECTO!";
-             modalText.textContent = "¡Bien hecho!";
-             console.log("Ahora tiene que sonar")
+        const isTrue = card.getAttribute("data-truth") === "true";
+
+        if (isTrue) {
+            card.classList.add("correct");
+            points++;
+            successes++;
+            card.style.borderColor = "#4caf50";
+            modalTitle.textContent = "¡CORRECTO!";
+            modalText.textContent = "¡Bien hecho!";
             modal.style.display = "flex";
             correctSound.currentTime = 0;
             correctSound.play();
             confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 }
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
             });
-             } else {
+
+            if (successes === totalSuccesses) {
+                clearInterval(interval);
+                finishGame("¡Ganaste!");
+            }
+        } else {
             const correctInfo = card.getAttribute("data-correct");
             card.classList.add("incorrect");
             modalTitle.textContent = "¡Incorrecto!";
-            modalText.textContent = correctInfo;
+            modalText.textContent = correctInfo || "Respuesta incorrecta.";
             modal.style.display = "flex";
-            card.style.borderColor = "#f44336" ;
+            card.style.borderColor = "#f44336";
             incorrectSound.currentTime = 0;
             incorrectSound.play();
         }
-     });  
     });
+});
     closeModalBtn.addEventListener("click", ()   => { 
     modal.style.display = "none";
     });
@@ -83,4 +126,5 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none" ;
         }
     });
+    iniciarTemporizador();
 });

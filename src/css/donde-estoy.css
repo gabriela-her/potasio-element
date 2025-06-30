@@ -27,9 +27,20 @@ h2 {
     color: #333;
 }
 
+#divIntro {
+    display: flex;
+    margin-bottom: 50px;
+}
+
 #pIntro {
     width: 70%;
-    margin-bottom: 50px;
+    padding-right: 70px;
+}
+
+#introImg {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .pScrollDown {
@@ -186,7 +197,16 @@ h4 {
 @media only screen and (max-width: 992px) {
 
     /* RESPONSIVE CAROUSEL */
+    #divIntro {
+        display: block;
+    }
+
     #pIntro {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #introImg {
         width: 100%;
     }
 
