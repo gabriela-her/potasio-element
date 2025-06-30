@@ -9,6 +9,10 @@ body {
     color: #333;
 }
 
+:root {
+  --liHover: rgba(235, 148, 134, 0.3);
+}
+
 /* MAIN */
 main>div {
     margin: 0% 10%;
@@ -41,6 +45,11 @@ h2 {
     width: 30%;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#introImg:hover {
+    scale: 1.05;
+    transition: all .5s ease-in-out;
 }
 
 .pScrollDown {
@@ -185,8 +194,27 @@ h4 {
     border-radius: 10px;
 }
 
+.card img:hover {
+    scale: 1.02;
+    transition: all .5s ease-in-out;
+}
+
 .card ul {
     line-height: 2.3;
+}
+
+.card ul li {
+    background: linear-gradient(to bottom,
+            var(--liHover) 0%,
+            var(--liHover) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 5px 1px;
+    transition: background-size 0.9s;
+}
+
+.card ul li:hover {
+    background-size: 5px 55px;
 }
 
 .card ul li::before {
@@ -231,5 +259,6 @@ h4 {
 
     .card {
         width: 100%;
+        margin-bottom: 30px;
     }
 }
