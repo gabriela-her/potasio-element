@@ -6,7 +6,10 @@
     <title>Curiosidades</title>
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/curiosidades.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <header>
@@ -32,10 +35,17 @@
     <section class="cards-curiosidades" id="cards-container">
         <h2>VAMOS A JUGAR: ¿VERDADERO O FALSO?</h2>
             <p class="subtitle">Haz click en las afirmaciones sobre el potasio que creas que son correctas.</p>
+         <div id="inicio-container">
+            <button id="inicio-btn">¡Empezar juego!</button>
+         </div>
     </section>
-    <section class="cards-container">
+    <section class="game-stats">
+        <p id="timer">Tiempo: 30</p>
+        <p id="score">Puntos: 0</p>
+    </section>
+    <section class="cards-container" id="cards-container">
         <article class="card" data-truth="true">
-            <p>El potasio reacciona con el agua, explota y arde con una llama lila por la rápida liberación de hidrógeno</p>
+            <p>El potasio  reacciona con el agua, explota y arde con una llama lila por la rápida liberación de hidrógeno.</p>
         </article>
         <article class="card" data-truth="false" data-correct="El potasio se encuentra en muchos alimentos, no solo en plátanos. Es esencial para el cuerpo humano.">
             <p>El potasio se encuentra exclusivamente en los plátanos, es la única fuente que tiene el ser humano de ingerirlo en alimentos</p>
@@ -80,7 +90,7 @@
         <div id="video-modal"       style="display:none;">
             <div class="modal-meme-content">
                 <button id="cerrar-video">✖</button>
-                <video id="potasio-video" controls width="100%" autoplay>
+                <video id="potasio-video" controls width="100%">
                  <source src="../public/video/potasiovideo.mp4" type="video/mp4">
                  </video>
             </div>

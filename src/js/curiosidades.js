@@ -1,86 +1,164 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".card");
-    const modal = document.getElementById("modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalText = document.getElementById("modal-text");
-    const closeModalBtn = document.getElementById("cerrar-modal");
-    const correctSound = new Audio("../public/sounds/potasiosound.mp3");
-    const incorrectSound = new Audio("../public/sounds/error.mp3");
-    incorrectSound.load();
-    const reiniciarButton = document.getElementById("reiniciar-button");
+    const timerElement = document.getElementById("timer");
+    const scoreElement = document.getElementById("score");
+    const startButton = document.getElementById("inicio-btn");
+    const cardsContainer = document.querySelector(".cards-container");
+    const statsSection = document.querySelector(".game-stats");
+    const restartButton = document.getElementById("reiniciar-button");
+    const soundCorrect = new Audio("../public/sounds/potasiosound.mp3"); 
+    const soundIncorrect = new Audio("../public/sounds/error.mp3");
     const verMemeBtn = document.getElementById("ver-meme-btn");
     const videoModal = document.getElementById("video-modal");
-    const cerrarVideo = document.getElementById("cerrar-video");
-    const video = document.getElementById("potasio-video");
+    const cerrarVideoBtn = document.getElementById("cerrar-video");
+    const potasioVideo = document.getElementById("potasio-video");
 
+    let timeLeft = 30;
+    let score = 0;
+    let timerInterval;
+    let correctClicks = 0;
+    let incorrectClicks = 0;
+
+    function startGame() {
+        cardsContainer.style.display = "grid";
+        statsSection.style.display = "flex";
+        startButton.style.display = "none";
+        restartButton.style.display = "block";
+        correctClicks = 0;
+        incorrectClicks = 0;
+        score = 0;
+        timeLeft = 30;
+        scoreElement.textContent = "Puntos: 0";
+        timerElement.textContent = "Tiempo: 30";
+        timerElement.classList.remove("time-low");
+
+        // Reactivar clicks y limpiar estilos de tarjetas
+        cards.forEach(card => {
+            card.classList.remove("correct", "incorrect", "clicked");
+            card.addEventListener("click", handleCardClick);
+        });
+
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = `Tiempo: ${timeLeft}`;
+            if (timeLeft <= 10) {
+                timerElement.classList.add("time-low");
+            }
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                endGame();
+            }
+        }, 1000);
+    }
+
+    function handleCardClick(e) {
+        const card = e.currentTarget;
+        const isTrue = card.dataset.truth === "true";
+
+        if (card.classList.contains("clicked")) return; // Evita doble clic
+
+        card.classList.add("clicked");
+
+        if (isTrue) {
+            card.classList.add("correct");
+            correctClicks++;
+
+            let baseScore = Math.min(correctClicks * (10 / 3), 10);
+            score = Math.max(baseScore - (incorrectClicks * 2), 0);
+
+            scoreElement.textContent = `Puntos: ${score.toFixed(2)}`;
+            scoreElement.classList.add("score-increase");
+            setTimeout(() => scoreElement.classList.remove("score-increase"), 500);
+
+            soundCorrect.play();
+
+            if (correctClicks === 3) {
+                // Desactivar clicks
+                cards.forEach(c => c.removeEventListener("click", handleCardClick));
+
+                showModal("¡Correcto!", "¡Bien hecho!", () => {
+                    endGame();
+                });
+            } else {
+                showModal("¡Correcto!", "¡Bien hecho!");
+            }
+
+        } else {
+            card.classList.add("incorrect");
+            incorrectClicks++;
+
+            let baseScore = Math.min(correctClicks * (10 / 3), 10);
+            score = Math.max(baseScore - (incorrectClicks * 2), 0);
+
+            scoreElement.textContent = `Puntos: ${score.toFixed(2)}`;
+
+            const correction = card.dataset.correct || "Esta afirmación es incorrecta.";
+            showModal("Incorrecto", correction);
+            soundIncorrect.play();
+        }
+    }
+
+    function endGame() {
+        clearInterval(timerInterval);
+        alert("¡Juego terminado! Tu puntuación fue: " + score);
+
+        cards.forEach(card => {
+            card.removeEventListener("click", handleCardClick);
+        });
+    }
+
+    function showModal(title, text, onClose) {
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalText = document.getElementById("modal-text");
+        const cerrarModalBtn = document.getElementById("cerrar-modal");
+
+        modalTitle.textContent = title;
+        modalText.textContent = text;
+        modal.style.display = "flex";
+
+        function handleClose() {
+            modal.style.display = "none";
+            cerrarModalBtn.removeEventListener("click", handleClose);
+            if (onClose) onClose();
+        }
+
+        cerrarModalBtn.addEventListener("click", handleClose);
+    }
+
+    // Botón reiniciar
+    restartButton.addEventListener("click", () => {
+        clearInterval(timerInterval);
+        correctClicks = 0;
+        incorrectClicks = 0;
+        score = 0;
+        startGame();
+    });
+
+    // Botón iniciar
+    startButton.addEventListener("click", startGame);
+
+    // Modal video y controles
     verMemeBtn.addEventListener("click", () => {
         videoModal.style.display = "block";
-        video.currentTime = 0;
-        video.play();
+        potasioVideo.currentTime = 0;
+        potasioVideo.play();
     });
 
-    cerrarVideo.addEventListener("click", () => {
+    cerrarVideoBtn.addEventListener("click", () => {
+        potasioVideo.pause();
         videoModal.style.display = "none";
-        video.pause();
     });
 
-    window.addEventListener("click", (e) => {
+    videoModal.addEventListener("click", (e) => {
         if (e.target === videoModal) {
+            potasioVideo.pause();
             videoModal.style.display = "none";
-             video.pause();
-         }
-  });
-
-    reiniciarButton.addEventListener("click", () => {
-        cards.forEach(card => {
-            card.classList.remove("correct", "incorrect");
-            card.style.borderColor = "";
-        });
-        modal.style.display = "none";
+        }
     });
 
+    // Añadir listener a las cards al cargar la página para que estén activas cuando se inicia el juego
     cards.forEach(card => {
-        card.addEventListener("click", (e) => {
-            card.classList.add("clicked");
-            setTimeout(() => {
-             card.classList.remove("clicked");         
-            }, 300);
-
-             const isTrue = card.getAttribute("data-truth") === "true";
-             const isExplosionCard = card.textContent.includes("reacciona con el agua");
-
-            if (isTrue) {
-             card.classList.add("correct");
-             card.style.borderColor =" #4caf50" ;
-             modalTitle.textContent = "¡CORRECTO!";
-             modalText.textContent = "¡Bien hecho!";
-             console.log("Ahora tiene que sonar")
-            modal.style.display = "flex";
-            correctSound.currentTime = 0;
-            correctSound.play();
-            confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 }
-            });
-             } else {
-            const correctInfo = card.getAttribute("data-correct");
-            card.classList.add("incorrect");
-            modalTitle.textContent = "¡Incorrecto!";
-            modalText.textContent = correctInfo;
-            modal.style.display = "flex";
-            card.style.borderColor = "#f44336" ;
-            incorrectSound.currentTime = 0;
-            incorrectSound.play();
-        }
-     });  
-    });
-    closeModalBtn.addEventListener("click", ()   => { 
-    modal.style.display = "none";
-    });
-    window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-    modal.style.display = "none" ;
-        }
+        card.addEventListener("click", handleCardClick);
     });
 });

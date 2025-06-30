@@ -32,6 +32,14 @@ button {
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease forwards;
 }
+.cards-container {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .cards-container {
@@ -57,10 +65,77 @@ button {
 .card.correct {
     background-color: #4CAF50;
     color: white;
+    transition: 0.3 ease;
 }
 .card.incorrect {
+  pointer-events: none;
     background-color: #F44336;
     color: white;
+}
+
+#game-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  gap: 20px;
+  height: 50px;
+  background: #436436;
+  color: #eeeeee;
+  font-family: kodchasan, sans-serif;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#inicio-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#inicio-btn {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#inicio-btn:hover {
+  background-color: #388e3c;
+}
+#timer, #score {
+  background: #436436;
+  padding: 8px 16px;
+  border-radius: 6px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+}
+
+#timer {
+  color: white;
+  font-weight: 600;
+}
+#timer.time-low {
+  color: #ff5252; /* rojo para alerta de poco tiempo */
+  font-weight: 700;
+  text-shadow: 0 0 8px #ff5252;
+}
+#score {
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3 ease;
+}
+#score.score-increase {
+  transform: scale(1.15);
+  color: #fff176;
+  text-shadow: 0 0 10px #fff176;
 }
 .modal {
     display: none;
@@ -164,7 +239,7 @@ button {
 }
 #reiniciar-button {
     margin: 20px auto;
-    display: block;
+    display: none;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #436436;
