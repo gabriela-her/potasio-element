@@ -96,7 +96,15 @@ h2 {
     padding: 8px;
     align-items: center;
 }
+.irinapicture{
+  width: 160px;
+  height: auto;
+}
 .nicole-picture {
+  width: 160px;
+  height: auto;
+}
+.gabrielapicture {
   width: 160px;
   height: auto;
 }
