@@ -1,7 +1,7 @@
 /* Fuente y reset básico */
 body {
   margin: 0;
-  padding: 20px;
+  /*padding: 20px;*/
   font-family: 'Kodchasan', sans-serif;
   background-color: #fff;
 }
@@ -50,13 +50,15 @@ body {
   font-size: 1.1rem;
   max-width: 60%;
   min-width: 250px;
+  margin-left: 4%;
 }
-
-.imagen img {
-  width: 100%;
-  max-width: 300px;
+.imagen {
+  width: 300%;
+  max-width: 450px; /* Más pequeña que los 300px anteriores */
   height: auto;
   border-radius: 10px;
+  margin-right: 30px; /* Espacio a la derecha */
+  margin-left: 10px;  /* Un poco de espacio desde la izquierda */
 }
 
 /* Responsive: pantallas pequeñas */

@@ -48,14 +48,20 @@
     <main>
         <div id="carousel-container">
             <h2>Dónde estoy</h2>
-            <p id="pIntro">¡Hola! Soy el potasio, un mineral esencial que ayuda a que tus músculos, nervios y corazón
-                funcionen bien. Me puedes encontrar en frutas deliciosas como el plátano, la naranja, el aguacate y las
-                fresas. Cada vez que me consumes, te ayudo a mantener el equilibrio de los líquidos en tu cuerpo y a
-                sentirte con más energía. ¡No me olvides, me necesitas más de lo que crees!
-            </p>
+            <div id="divIntro">
+                <p id="pIntro">¡Hola! Soy el potasio, un mineral esencial que ayuda a que tus músculos, nervios y
+                    corazón
+                    funcionen bien. Me puedes encontrar en frutas deliciosas como el plátano, la naranja, el aguacate y
+                    las
+                    fresas. Cada vez que me consumes, te ayudo a mantener el equilibrio de los líquidos en tu cuerpo y a
+                    sentirte con más energía. ¡No me olvides, me necesitas más de lo que crees!
+                </p>
+                <img src="../public/donde-estoy/potassium-food.webp" alt="alimentos con potasio" id="introImg">
+            </div>
             <p class="pScrollDown" onclick="scrollDown1()">Haz click aquí para comenzar y ver dónde me puedes
-                    encontrar<br>
-                    <i class="arrow-down"></i></p>
+                encontrar<br>
+                <i class="arrow-down"></i>
+            </p>
             <div id="carousel">
                 <div class="carousel-item" id="foodCarousel">
                     <h5>Plátanos</h5>
@@ -63,7 +69,7 @@
                         El plátano es una excelente fuente de potasio, clave para músculos, nervios y presión arterial.
                         Además, es fácil de consumir y muy energético.
                     </p>
-                    <img src="../public/banana-carousel.png" alt="Bananas">
+                    <img src="../public/donde-estoy/bananas.webp" alt="Bananas">
                 </div>
                 <div class="carousel-item">
                     <h5>Espinacas</h5>
@@ -71,7 +77,7 @@
                         La espinaca aporta potasio, esencial para músculos y nervios. También es baja en calorías y rica
                         en nutrientes.
                     </p>
-                    <img src="../public/espinaca.jpg" alt="Espinacas">
+                    <img src="../public/donde-estoy/espinaca.webp" alt="Espinacas">
                 </div>
                 <div class="carousel-item">
                     <h5>Aguacate</h5>
@@ -79,7 +85,7 @@
                         El aguacate es rico en potasio, que ayuda a regular músculos y presión arterial. También aporta
                         grasas saludables y fibra.
                     </p>
-                    <img src="../public/aguacate-carousel.png" alt="Aguacate">
+                    <img src="../public/donde-estoy/avocado.webp" alt="Aguacate">
                 </div>
             </div>
             <div id="carousel-nav">
@@ -89,14 +95,15 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 <p class="pScrollDown" onclick="scrollDown2()">Continúa para ver más alimentos<br>
-                        <i class="arrow-down"></i></p>
+                    <i class="arrow-down"></i>
+                </p>
             </div>
         </div>
         <div id="foodCards">
             <h3>Alimentación</h3>
             <div id="cards-container">
                 <article class="card">
-                    <img src="../public/verduras.png" alt="Verduras y hortalizas">
+                    <img src="../public/donde-estoy/brocoli.webp" alt="Verduras y hortalizas">
                     <h4>🥦 Verduras y hortalizas</h4>
                     <p>Este grupo es de los más ricos en potasio y saludable para destacar.</p>
                     <ul>
@@ -109,7 +116,7 @@
 
                 </article>
                 <article class="card">
-                    <img src="../public/frutas.png" alt="Frutas">
+                    <img src="../public/donde-estoy/melon-kiwi.webp" alt="Frutas">
                     <h4>🍌 Frutas</h4>
                     <p>Algunas frutas son fuentes destacadas, especialmente las tropicales.</p>
                     <ul>
@@ -121,7 +128,7 @@
 
                 </article>
                 <article class="card">
-                    <img src="../public/carne.png" alt="Carnes y pescados">
+                    <img src="../public/donde-estoy/pollo.webp" alt="Carnes y pescados">
                     <h4>🥩 Carnes y pescados</h4>
                     <p>Menos potasio que vegetales, pero siguen siendo relevantes, sobre todo para quienes no
                         consumen
