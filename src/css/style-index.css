@@ -36,6 +36,7 @@ ul.opciones li {
   cursor: pointer;
   transition: background 0.3s;
   text-align: center;
+  font-size: 20px;
 }
 
 ul.opciones li:hover {

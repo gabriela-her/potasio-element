@@ -5,24 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Estás en riesgo de déficit de potasio?</title>
-  <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
+  <link
+        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../src/css/mi-importancia.css" />
+  <link rel="stylesheet" href="../src/css/style.css">
 </head>
 
 <body>
-  <header>
+   <header>
     <div id="logo-container">
       <a href="../index.html"><i id="arrow-left-header"></i>
-        <h1><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
+        <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
       </a>
     </div>
-    <nav>
+    <nav class="topnav" id="myTopnav">
       <ul>
-        <li><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
-        <li><a href="../pages/mi-importancia.html">Mi importancia</a></li>
-        <li><a href="../pages/curiosidades.html">Curiosidades</a></li>
-        <li><a href="../pages/actualidad.html">Actualidad</a></li>
-        <li><a href="../pages/creadoras.html">Creadoras</a></li>
+        <li id="que-soy-li-link"><a href="../pages/que-soy.html">Qué soy</a></li>
+        <li id="donde-estoy-li-link"><a href="../pages/donde-estoy.html">Dónde estoy</a></li>
+        <li id="mi-importancia-li-link"><a href="../pages/mi-importancia.html">Mi importancia</a></li>
+        <li id="curiosidades-li-link"><a href="../pages/curiosidades.html">Curiosidades</a></li>
+        <li id="actualidad-li-link"><a href="../pages/actualidad.html">Actualidad</a></li>
+        <li id="creadoras-li-link"><a href="../pages/creadoras.html">Creadoras</a></li>
+        <li id="fa-bars-menu"><a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+            <i class="fa fa-bars" id="openMenu"></i>
+          </a></li>
       </ul>
     </nav>
   </header>
@@ -33,7 +41,7 @@
       <div class="contenedor-flex">
         <div class="texto-potencia">
           <h1 class="titulo-potencia">
-            Ya sabes quién soy y dónde estoy,<br> ahora hablemos de por qué soy TAN IMPORTANTE
+            Ya sabes quién soy y dónde estoy,ahora hablemos de por qué soy TAN IMPORTANTE
           </h1>
           <p>
             Soy fundamental para el cuerpo humano porque participo en procesos vitales que permiten que nuestro
@@ -61,23 +69,26 @@
 
     <!-- ----------- Encuesta -------- -->
     <section class="evaluacion-potasio">
-      <h2>¿Estás en riesgo de tener bajo potasio?</h2>
-      <p>Responde estas preguntas para descubrir tu nivel de riesgo y aprende cómo mejorar.</p>
+      <h2>¿Tu y el potasio son buenos amigos?</h2>
+      <p>Responde estas preguntas para descubrirlo y aprende cómo mejorar.</p>
 
       <form id="potassiumForm">
 
         <fieldset class="pregunta activa">
-          <legend>1. ¿Cuántas frutas y verduras consumes al día?</legend>
+          <legend>1. ¿Cuantas piezas de frutas como platano, naranja o kiwi incluyes en tu dia a dia?</legend>
           <label><input type="radio" name="frutas" value="alta" required> Más de 5 porciones</label>
           <label><input type="radio" name="frutas" value="media"> 2–4 porciones</label>
           <label><input type="radio" name="frutas" value="baja"> Menos de 2 porciones</label>
         </fieldset>
 
         <fieldset class="pregunta">
-          <legend>2. ¿Tomas medicamentos diuréticos?</legend>
-          <label><input type="radio" name="diureticos" value="no" required> No</label>
-          <label><input type="radio" name="diureticos" value="si"> Sí</label>
+          <legend>2. ¿Sientes calambres musculares sin razón aparente, especialmente después de caminar o dormir?
+          </legend>
+          <label><input type="radio" name="calambres" value="no" required> No</label>
+          <label><input type="radio" name="calambres" value="sometimes"> A veces</label>
+          <label><input type="radio" name="calambres" value="si"> Sí</label>
         </fieldset>
+
 
         <fieldset class="pregunta">
           <legend>3. ¿Con qué frecuencia haces ejercicio intenso?</legend>
@@ -87,9 +98,9 @@
         </fieldset>
 
         <fieldset class="pregunta">
-          <legend>4. ¿Consumes café, alcohol o bebidas energéticas regularmente?</legend>
+          <legend>4. ¿Consumes bebidas que podrían afectar tu balance de potasio?</legend>
           <label><input type="radio" name="estimulantes" value="no" required> No</label>
-          <label><input type="radio" name="estimulantes" value="si"> Sí</label>
+          <label><input type="radio" name="estimulantes" value="si"> Sí, no voy a mentir</label>
         </fieldset>
 
         <div class="botones">
@@ -101,18 +112,39 @@
     </section>
 
     <section id="resultado" class="oculto">
-      <h2>Tu nivel de riesgo:</h2>
+      <h2>¿Qué tal te llevas con el potasio?</h2>
       <div id="nivel"></div>
       <p id="recomendacion"></p>
     </section>
 
   </main>
 
-  <footer>
+    <footer>
+      <div id="footer-nav">
+        <ul>
+          <li><a href="../pages/donde-estoy.html"><i id="arrow-left-footer"></i>Dónde estoy</a></li>
+          <li><a href="../pages/curiosidades.html">Curiosidades<i id="arrow-right-footer"></i></a></li>
+        </ul>
+      </div>
+      <div id="footer-info">
+        <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+      </div>
     <p>© 2025 Importancia del Potasio. Aprende, cuida y vive saludable.</p>
   </footer>
 
   <script src="../src/js/mi-importancia.js"></script>
+  <script src="../src/js/script.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+  <script>
+    $(function () {
+      $('a').each(function () {
+        if ($(this).prop('href') == window.location.href) {
+          $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
