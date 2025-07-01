@@ -23,6 +23,14 @@ document.getElementById("curiosidades-li-link").style.backgroundColor = "rgba(67
 document.getElementById("actualidad-li-link").style.backgroundColor = "rgba(248, 140, 140, 0.5)";
 document.getElementById("creadoras-li-link").style.backgroundColor = "rgba(250, 222, 82, 0.5)";
 
+$(function () {
+      $('a').each(function () {
+        if ($(this).prop('href') == window.location.href) {
+          $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
+      });
+    });
+
 // Código antiguo que gira las 3 barras del menú de navegación al hacer click:
 // const rotateBars = document.getElementById("fa-bars-menu");
 // rotateBars.addEventListener("click", function () {
