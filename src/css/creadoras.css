@@ -17,6 +17,10 @@ h2 {
 }
 .card {
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
 }
 .card:hover {
     transform:scale(1.03);
@@ -88,20 +92,30 @@ h2 {
   color: #436436;
   font-size: 14px;
 }
-.lulupicture { 
-    display: block;
-    width: auto;
-    height: 200px;
+.picture { 
+    display: flex;
+    width: 160px;
+    height: auto;
     margin: 0 auto;
     padding: 8px;
     align-items: center;
+    
+    
+}
+.irinapicture{
+  width: 160px;
+  height: auto;
 }
 .nicole-picture {
   width: 160px;
   height: auto;
 }
-.irinapicture{
+.gabrielapicture {
   width: 160px;
+  height: auto;
+}
+.valentinapicture {
+  width: 110px;
   height: auto;
 }
 .linkpicture {

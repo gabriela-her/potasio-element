@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-  --liHover: rgba(235, 148, 134, 0.3);
+    --liHover: rgba(235, 148, 134, 0.3);
 }
 
 /* MAIN */
@@ -222,7 +222,19 @@ h4 {
 }
 
 /* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1200px) {
+
+    .carousel-item>img {
+        margin-top: 40px;
+    }
+}
+
 @media only screen and (max-width: 992px) {
+
+    body {
+        overflow-x: hidden;
+    }
 
     /* RESPONSIVE CAROUSEL */
     #divIntro {
@@ -235,7 +247,9 @@ h4 {
     }
 
     #introImg {
-        width: 100%;
+        width: 60%;
+        display: block;
+        margin: auto;
     }
 
     h5 {

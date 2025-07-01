@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'kodchasan', sans-serif;
   background-color: #f5f7f9;
   color: #333;
   /*padding: 20px;*/
@@ -66,6 +66,7 @@ footer {
   border-left: 6px solid #4CAF50;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .news-card:hover {
@@ -78,6 +79,8 @@ footer {
   margin-bottom: 10px;
   color: #2c3e50;
   cursor: pointer;
+  font-weight: bold;
+  text-align: center;
 }
 
 .resaltado {
@@ -98,12 +101,15 @@ footer {
 
 .asistente-container {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  bottom: 20px;
+  right: 20px;
   width: 220px;
   z-index: 9999;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'kodchasan', sans-serif;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Burbuja de texto arriba izquierda */
@@ -119,6 +125,7 @@ footer {
   line-height: 1.3;
   font-weight: 600;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Flecha (punta de la burbuja) */
@@ -126,7 +133,8 @@ footer {
   content: "";
   position: absolute;
   bottom: -15px;
-  left: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   border-width: 10px;
   border-style: solid;
   border-color: #f39c12 transparent transparent transparent;
@@ -134,8 +142,8 @@ footer {
 
 /* Naranja caricaturesca */
 .naranja-mascota {
-  width: 160px;
-  height: 160px;
+  width: 110px;
+  height: 110px;
   background: radial-gradient(circle at 40% 40%, #ffae00, #e67e22);
   border-radius: 50%;
   position: relative;
@@ -148,48 +156,45 @@ footer {
 /* ojos más expresivos */
 .ojos {
   position: absolute;
-  top: 48px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
   display: flex;
-  justify-content: space-around;
-  padding: 0 30px;
+  justify-content: space-between;
+  width: 40px;
 }
 
 .ojo {
-  width: 20px;
-  height: 20px;
-  background: #fff;
+  width: 14px;
+  height: 14px;
+  background: white;
   border-radius: 50%;
   position: relative;
-  box-shadow: inset 0 0 3px #000;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .ojo::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
-  background: #000;
+  width: 6px;
+  height: 6px;
+  background: black;
   border-radius: 50%;
+  top: 4px;
+  left: 4px;
 }
 
-/* boca sonriente */
 .boca {
-  width: 40px;
-  height: 25px;
-  border-bottom: 5px solid #000;
-  border-radius: 0 0 40px 40px;
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  width: 30px;
+  height: 18px;
+  border-bottom: 4px solid #000;
+  border-radius: 0 0 50% 50%;
 }
 
-/* hoja más detallada */
 .hojita {
   width: 35px;
   height: 20px;
@@ -203,16 +208,18 @@ footer {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.opciones, .formulario {
-  text-align: center;
+
+.opciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.opciones button,
-.formulario button {
+.opciones button {
   background-color: #e67e22;
   border: none;
-  padding: 10px 20px;
-  margin: 5px 5px 0 5px;
+  padding: 8px 16px;
   font-size: 14px;
   border-radius: 8px;
   color: white;
@@ -220,8 +227,7 @@ footer {
   transition: background 0.3s;
 }
 
-.opciones button:hover,
-.formulario button:hover {
+.opciones button:hover {
   background-color: #d35400;
 }
 
@@ -272,4 +278,101 @@ canvas#confeti {
 .check-icon {
   font-size: 20px;
   color: #2ecc71;
+}  
+
+.mezclar-btn {
+  background-color: #f78f1e;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.mezclar-btn:hover {
+  background-color: #d7720f;
+}
+
+.boton-potasio {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin: 20px auto;
+  display: block;
+  max-width: 90%;
+}
+
+.boton-potasio:hover {
+  background-color: darkorange;
+}
+#reactor {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 40px;
+  background: #fff;
+  border: 2px dashed orange;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background: #ffe6c0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.symbol {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+#reaction-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  max-width: 80%;
+  text-align: center;
 }

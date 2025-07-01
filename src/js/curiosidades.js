@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let score = 0;
     let timerInterval;
     let correctClicks = 0;
+    let incorrectClicks = 0;
 
     function startGame() {
         cardsContainer.style.display = "grid";
@@ -24,12 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
         startButton.style.display = "none";
         restartButton.style.display = "block";
         correctClicks = 0;
-
+        incorrectClicks = 0;
         score = 0;
         timeLeft = 30;
         scoreElement.textContent = "Puntos: 0";
         timerElement.textContent = "Tiempo: 30";
         timerElement.classList.remove("time-low");
+
+        // Reactivar clicks y limpiar estilos de tarjetas
+        cards.forEach(card => {
+            card.classList.remove("correct", "incorrect", "clicked");
+            card.addEventListener("click", handleCardClick);
+        });
 
         timerInterval = setInterval(() => {
             timeLeft--;
@@ -44,23 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     }
 
-    function endGame() {
-        alert("¡Tiempo terminado! Tu puntuación fue: " + score);
-        cards.forEach(card => {
-            card.removeEventListener("click", handleCardClick);
-        });
-    }
-
     function handleCardClick(e) {
         const card = e.currentTarget;
         const isTrue = card.dataset.truth === "true";
 
-        if (card.classList.contains("clicked")) return;
-
-        if (correctClicks >= 3 && !isTrue){
-            showModal("¡El juego ha terminado!", "Ya seleccionaste las 3 respuestas correctas.");
-            return;
-        }
+        if (card.classList.contains("clicked")) return; // Evita doble clic
 
         card.classList.add("clicked");
 
@@ -68,25 +63,33 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("correct");
             correctClicks++;
 
-            score = Math.min(correctClicks * (10 / 3), 10);
+            let baseScore = Math.min(correctClicks * (10 / 3), 10);
+            score = Math.max(baseScore - (incorrectClicks * 2), 0);
 
             scoreElement.textContent = `Puntos: ${score.toFixed(2)}`;
             scoreElement.classList.add("score-increase");
             setTimeout(() => scoreElement.classList.remove("score-increase"), 500);
 
-            showModal("¡Correcto!", "¡Bien hecho!");
             soundCorrect.play();
 
             if (correctClicks === 3) {
-                cards.forEach(c => {
-                    c.removeEventListener("click", handleCardClick);
+                // Desactivar clicks
+                cards.forEach(c => c.removeEventListener("click", handleCardClick));
+
+                showModal("¡Correcto!", "¡Bien hecho!", () => {
+                    endGame();
                 });
+            } else {
+                showModal("¡Correcto!", "¡Bien hecho!");
             }
 
         } else {
             card.classList.add("incorrect");
+            incorrectClicks++;
 
-            score = Math.max(score - 2, 0);
+            let baseScore = Math.min(correctClicks * (10 / 3), 10);
+            score = Math.max(baseScore - (incorrectClicks * 2), 0);
+
             scoreElement.textContent = `Puntos: ${score.toFixed(2)}`;
 
             const correction = card.dataset.correct || "Esta afirmación es incorrecta.";
@@ -95,35 +98,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function showModal(title, text) {
-        const modal = document.getElementById("modal");
-        document.getElementById("modal-title").textContent = title;
-        document.getElementById("modal-text").textContent = text;
-        modal.style.display = "flex";
-    }
-
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
-    }
-
-    function resetGame() {
+    function endGame() {
         clearInterval(timerInterval);
+        alert("¡Juego terminado! Tu puntuación fue: " + score);
+
         cards.forEach(card => {
-            card.classList.remove("correct", "incorrect", "clicked");
-            card.addEventListener("click", handleCardClick); // Re-activar clicks
+            card.removeEventListener("click", handleCardClick);
         });
-        startGame();
     }
 
-    // Añadir listeners una sola vez al cargar la página
-    cards.forEach(card => {
-        card.addEventListener("click", handleCardClick);
+    function showModal(title, text, onClose) {
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalText = document.getElementById("modal-text");
+        const cerrarModalBtn = document.getElementById("cerrar-modal");
+
+        modalTitle.textContent = title;
+        modalText.textContent = text;
+        modal.style.display = "flex";
+
+        function handleClose() {
+            modal.style.display = "none";
+            cerrarModalBtn.removeEventListener("click", handleClose);
+            if (onClose) onClose();
+        }
+
+        cerrarModalBtn.addEventListener("click", handleClose);
+    }
+
+    // Botón reiniciar
+    restartButton.addEventListener("click", () => {
+        clearInterval(timerInterval);
+        correctClicks = 0;
+        incorrectClicks = 0;
+        score = 0;
+        startGame();
     });
 
+    // Botón iniciar
     startButton.addEventListener("click", startGame);
-    restartButton.addEventListener("click", resetGame);
-    document.getElementById("cerrar-modal").addEventListener("click", closeModal);
 
+    // Modal video y controles
     verMemeBtn.addEventListener("click", () => {
         videoModal.style.display = "block";
         potasioVideo.currentTime = 0;
@@ -142,4 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Añadir listener a las cards al cargar la página para que estén activas cuando se inicia el juego
+    cards.forEach(card => {
+        card.addEventListener("click", handleCardClick);
+    });
 });
