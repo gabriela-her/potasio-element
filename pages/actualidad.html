@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,6 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../src/css/actualidad.css">
   <link rel="stylesheet" href="../src/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -36,7 +39,7 @@
 
     <div class="burbuja" id="burbuja">
       ¿Quisieras que te enviara las proximas noticias a tu correo?
-    </div>
+    </div> 
 
     <div class="naranja-mascota" aria-label="Mascota asistente naranja" role="img">
       <div class="ojos">
@@ -56,10 +59,11 @@
       <input type="email" id="correo" placeholder="Tu correo electrónico" required />
       <button onclick="enviarCorreo()">Enviar</button>
     </div>
-
+    <div id="burbuja" class="burbuja" style="display: none;">¡Muchas gracias por suscribirte!</div>
     <canvas id="confeti"></canvas>
   </div>
   <main>
+   
     <div class="news-grid">
       <div class="news-card">
         <img class="news-img" src="../file/planta de michigan.png">
@@ -76,21 +80,6 @@
           eliminar sodio a través de los riñones y reduce la presión arterial.</p>
       </div>
 
-      <div class="news-card">
-        <img class="news-img" src="../file/potasio mas eficaz para reducir el sodio.jpg"
-          alt="Laboratorio científico con tubos de ensayo">
-        <h2>Potasio más eficaz que reducir sodio</h2>
-        <p><strong>Mayo 2025</strong> — Investigadores demostraron que elevar el consumo de potasio puede reducir la
-          presión arterial incluso sin disminuir el sodio, gracias a la acción renal y vascular.</p>
-      </div>
-
-      <div class="news-card">
-        <img class="news-img" src="../file/potasio reduce riesgo de infarto y acv.jpeg"
-          alt="Corazón saludable ilustración">
-        <h2>Potasio reduce riesgo de infarto y ACV</h2>
-        <p><strong>Abril 2025</strong> — Un estudio encontró que dietas ricas en potasio reducen el riesgo de infarto en
-          un 39 %, ACV en un 14 % y muertes en un 21 %, especialmente si se sustituye la sal común por sal potásica.</p>
-      </div>
 
       <div class="news-card">
         <img class="news-img" src="../file/OMS.jpeg" alt="Sal enriquecida con potasio en cucharilla">
@@ -104,15 +93,6 @@
         <h2>Impacto global del potasio en salud pública</h2>
         <p><strong>Abril 2025</strong> — El estudio SSaSS, con más de 20 000 participantes, mostró que sustituir sal
           común por potásica reduce ACV, eventos cardiovasculares y mortalidad total.</p>
-      </div>
-
-      <div class="news-card">
-        <img class="news-img"
-          src="https://images.unsplash.com/photo-1590080877777-c87d44b15d5b?auto=format&fit=crop&w=600&q=60"
-          alt="Instalaciones de planta de producción de potasa">
-        <h2>8. USDA otorga $80 millones a planta potásica</h2>
-        <p><strong>Abril 2025</strong> — El Departamento de Agricultura de EE.UU. financia con $80 millones la planta de
-          potasa en Osceola, fortaleciendo la producción nacional de fertilizantes.</p>
       </div>
 
       <div class="news-card">
@@ -133,6 +113,8 @@
           sostenible y económica que las de litio, con potencial para almacenamiento a gran escala.</p>
       </div>
     </div>
+  </div>
+</div>
   </main>
   <footer>
     <div id="footer-nav">
