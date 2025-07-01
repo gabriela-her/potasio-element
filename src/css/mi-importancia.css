@@ -91,30 +91,21 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #fff7b39a;
 }
 
 #imagen-disparadora {
-  width: 300px;
+  width: 320px;
   cursor: pointer;
   border-radius: 20px;
   animation: palpitar 1.5s infinite ease-in-out, resplandor 2s infinite ease-in-out;
   border: solid black;
   position: relative;
-  z-index: 10; /* para que esté encima de la franja */
-  margin-bottom: -3cm; /* "subimos" la imagen para que quede sobre la franja */
+  
+  margin-bottom: 1cm; /* "subimos" la imagen para que quede sobre la franja */
   background: white; /* para que no se vea el borde transparente si es png */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* opcional para que destaque más */
 }
-
-.yellow-line {
-  width: 100%;
-  height: 3cm;
-  background-color: #fff7b3;
-  border-radius: 0 0 20px 20px;
-  position: relative;
-  z-index: 5;
-}
-
 
 #imagen-disparadora:hover {
   transform: scale(1.05);
@@ -303,3 +294,21 @@ fieldset.pregunta.activa {
   background-color: #43cf63;
 }
 
+/* flecha de volver a la tabla periodica  */
+
+.back-to-table {
+  display: block;
+  margin: 1.5rem auto 0;
+  font-size: 2.5rem; 
+  color: #f88c8c7e; 
+  font-weight: 900; /* para que la flecha se vea gruesa */
+  width: fit-content;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.back-to-table:hover {
+  color: #43cf63; /* rosa más oscuro al pasar el mouse */
+}

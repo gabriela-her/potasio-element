@@ -9,6 +9,7 @@
     href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/css/mi-importancia.css" />
   <link rel="stylesheet" href="../src/css/style.css">
 </head>
@@ -69,17 +70,13 @@
         <span id="cerrar-mapa">✖</span>
       </div>
 
-      <!-- ✅ Franja amarilla visible siempre -->
-      <div class="yellow-line">
-        <p class=""> </p>
-      </div>
     </section>
 
 
     <!-- ----------- Encuesta -------- -->
     <section class="potasio-test">
       <h2>¿Tu y el potasio son buenos amigos?</h2>
-      <p>Responde estas preguntas para descubrirlo y aprende cómo mejorar.</p>
+      <p>Responde estas preguntas para descubrirlo y aprende cómo mejorar.</p><br>
 
       <form id="potassiumForm">
 
@@ -138,6 +135,14 @@
         <li><a href="../pages/curiosidades.html">Curiosidades<i id="arrow-right-footer"></i></a></li>
       </ul>
     </div>
+
+    <div class="volver-tabla-container">
+      <a href="https://celiami.github.io/periodic-table-project/#table-section" class="back-to-table"
+        title="Regresa a la tabla periódica">
+        <i class="fa fa-arrow-left"></i>
+      </a>
+    </div>
+
     <div id="footer-info">
       <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
     </div>
@@ -146,16 +151,16 @@
   <script src="../src/js/mi-importancia.js"></script>
   <script src="../src/js/script.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-   <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
-    <script>
-        $(function () {
-            $('a').each(function () {
-                if ($(this).prop('href') == window.location.href) {
-                    $(this).addClass('active'); $(this).parents('li').addClass('active');
-                }
-            });
-        });
-    </script>
+  <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+  <script>
+    $(function () {
+      $('a').each(function () {
+        if ($(this).prop('href') == window.location.href) {
+          $(this).addClass('active'); $(this).parents('li').addClass('active');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
