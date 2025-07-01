@@ -1,3 +1,5 @@
+let canvas, ctx, animationId; // ✅ Declaración correcta y necesaria
+
 // Mostrar el formulario para ingresar correo
 function mostrarFormulario() {
   document.getElementById('formulario').style.display = 'block';
@@ -42,7 +44,15 @@ function mostrarNotificacion(texto) {
   }, 4000);
 }
 
-// Animación simple de confeti
+// Mostrar opciones tras el confeti
+function mostrarPreguntaReacciones() {
+  const opciones = document.querySelector('.opciones');
+  if (opciones) opciones.style.display = 'flex';
+
+  const burbuja = document.getElementById('burbuja');
+  if (burbuja) burbuja.textContent = '¿Quieres recibir noticias por correo?';
+}
+
 function lanzarConfeti() {
   const canvas = document.getElementById('confeti');
   if (!canvas) return;
@@ -53,6 +63,8 @@ function lanzarConfeti() {
 
   const confeti = [];
   const colors = ['#FFA500', '#FFD580', '#FFB347', '#CC8400'];
+
+  let animationId; // ✅ declaración añadida
 
   for (let i = 0; i < 150; i++) {
     confeti.push({
@@ -107,8 +119,18 @@ function lanzarConfeti() {
   function animar() {
     draw();
     update();
-    requestAnimationFrame(animar);
+    animationId = requestAnimationFrame(animar);
   }
 
   animar();
+
+  setTimeout(() => {
+    cancelAnimationFrame(animationId);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    mostrarPreguntaReacciones(); 
+  }, 7000);
 }
+
+ document.getElementById('btnAbrirJuego').addEventListener('click', () => {
+    window.open('file:///C:/Users/Coder/Desktop/factoria-f5/potasio-element/pages/juego%20de%20vm.html', '_blank', 'width=900,height=700');
+  });
