@@ -1,8 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    background-color: rgb(86, 236, 86);
+    background-color: white;
+    font-family: kodchasan, sans-serif;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+  font-family: kodchasan, sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px #436436;
+  margin-top: 5%;
 }
 .card {
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
 }
 .card:hover {
     transform:scale(1.03);
@@ -61,20 +79,44 @@ body {
   transform: rotateY(180deg);
 }
 h2 {
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: #436436;
+    font-family: kodchasan, sans-serif;
     text-align: center;
     font-size: 15px;
     padding: 10px;
     margin: 20px;
 
 }
-.lulupicture { 
-    display: block;
-    width: 200px;
-    height: 200px;
+.email,
+.linkedin {
+  color: #436436;
+  font-size: 14px;
+}
+.picture { 
+    display: flex;
+    width: 160px;
+    height: auto;
     margin: 0 auto;
     padding: 8px;
+    align-items: center;
+    
+    
+}
+.irinapicture{
+  width: 160px;
+  height: auto;
+}
+.nicole-picture {
+  width: 160px;
+  height: auto;
+}
+.gabrielapicture {
+  width: 160px;
+  height: auto;
+}
+.valentinapicture {
+  width: 110px;
+  height: auto;
 }
 .linkpicture {
     width: 50px;

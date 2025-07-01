@@ -1,15 +1,4 @@
- // Responsive Nav
- function responsiveNav() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-
 // Carousel
-
 let slideIndex = 1;
 showSlides(slideIndex); // Cuando se muestra el carousel se sitúa en su index que se define como 1, la primera fruta
 
@@ -37,4 +26,14 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " carousel-item-active"; // Añade la clase para resaltar el dot del carousel-item activo
+}
+
+// Scroll 
+function scrollDown1() {
+  const element = document.getElementById("carousel");
+  element.scrollIntoView();
+}
+function scrollDown2() {
+  const element = document.getElementById("foodCards");
+  element.scrollIntoView();
 }
