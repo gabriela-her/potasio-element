@@ -111,6 +111,15 @@
             <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
         </div>
  </footer>
-    
+     <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
