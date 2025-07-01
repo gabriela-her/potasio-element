@@ -376,3 +376,23 @@ canvas#confeti {
   max-width: 80%;
   text-align: center;
 }
+
+  .boton-mezclar {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .boton-mezclar:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+  }
