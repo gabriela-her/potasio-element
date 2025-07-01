@@ -248,3 +248,21 @@ body {
 .boton-siguiente:hover {
   background-color: #4c901c;
 }
+
+
+.back-to-table {
+  display: block;
+  margin: 1.5rem auto 0;
+  font-size: 2.5rem; 
+  color: #f88c8c7e; 
+  font-weight: 900; /* para que la flecha se vea gruesa /
+  width: fit-content;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.back-to-table:hover {
+  color: #43cf63; / rosa más oscuro al pasar el mouse */
+}
