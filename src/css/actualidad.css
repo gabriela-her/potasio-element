@@ -66,6 +66,7 @@ footer {
   border-left: 6px solid #4CAF50;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .news-card:hover {
@@ -78,6 +79,8 @@ footer {
   margin-bottom: 10px;
   color: #2c3e50;
   cursor: pointer;
+  font-weight: bold;
+  text-align: center;
 }
 
 .resaltado {

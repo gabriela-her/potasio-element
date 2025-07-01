@@ -130,7 +130,3 @@ function lanzarConfeti() {
     mostrarPreguntaReacciones(); 
   }, 7000);
 }
-
- document.getElementById('btnAbrirJuego').addEventListener('click', () => {
-    window.open('file:///C:/Users/Coder/Desktop/factoria-f5/potasio-element/pages/juego%20de%20vm.html', '_blank', 'width=900,height=700');
-  });
