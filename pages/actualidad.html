@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../src/css/actualidad.css">
   <link rel="stylesheet" href="../src/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +41,7 @@
 
     <div class="burbuja" id="burbuja">
       ¿Quisieras que te enviara las proximas noticias a tu correo?
-    </div> 
+    </div>
 
     <div class="naranja-mascota" aria-label="Mascota asistente naranja" role="img">
       <div class="ojos">
@@ -63,7 +65,7 @@
     <canvas id="confeti"></canvas>
   </div>
   <main>
-   
+
     <div class="news-grid">
       <div class="news-card">
         <img class="news-img" src="../file/planta de michigan.png">
@@ -113,8 +115,8 @@
           sostenible y económica que las de litio, con potencial para almacenamiento a gran escala.</p>
       </div>
     </div>
-  </div>
-</div>
+    </div>
+    </div>
   </main>
   <footer>
     <div id="footer-nav">
@@ -123,6 +125,14 @@
         <li><a href="../pages/creadoras.html">Creadoras<i id="arrow-right-footer"></i></a></li>
       </ul>
     </div>
+
+    <!-- Botón que activa el juego -->
+    <a href="./juego-actualidad.html"> <button class="boton-potasio" >
+      ¡Ven juguemos a mezclar elementos con el potasio!
+    </button>
+    </a>
+
+   
     <div id="footer-info">
       <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
     </div>
@@ -135,15 +145,16 @@
   <script src="../src/js/actualidad.js"></script>
   <script src="../src/js/script.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
-  <script>
-    $(function () {
-      $('a').each(function () {
-        if ($(this).prop('href') == window.location.href) {
-          $(this).addClass('active'); $(this).parents('li').addClass('active');
-        }
-      });
-    });
-  </script>
+   <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

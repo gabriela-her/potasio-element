@@ -66,11 +66,13 @@ button {
     background-color: #4CAF50;
     color: white;
     transition: 0.3 ease;
+    opacity: 1 !important;
 }
 .card.incorrect {
   pointer-events: none;
     background-color: #F44336;
     color: white;
+  opacity: 1 !important;
 }
 
 #game-stats {

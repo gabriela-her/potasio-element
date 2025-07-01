@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Potasio Reactor</title>
+  <!-- Enlace al archivo de estilos CSS -->
+  <link rel="stylesheet" href="../src/css/juego-actualidad.css" />
+</head>
+<body>
+
+<h1>⚗️🧪¡Mezclemos Elementos!🧪⚗️</h1>
+<p>🤓Arrastra un elemento al reactor para ver la reacción con el potasio🤓</p>
+
+<div id="elements">
+  <div class="element agua" draggable="true" data-element="Agua">
+    <div class="symbol">H₂O</div>
+    Agua
+  </div>
+  <div class="element cloro" draggable="true" data-element="Cloro">
+    <div class="symbol">Cl</div>
+    Cloro
+  </div>
+  <div class="element oxigeno" draggable="true" data-element="Oxígeno">
+    <div class="symbol">O₂</div>
+    Oxígeno
+  </div>
+  <div class="element azufre" draggable="true" data-element="Azufre">
+    <div class="symbol">S</div>
+    Azufre
+  </div>
+  <div class="element hierro" draggable="true" data-element="Hierro">
+    <div class="symbol">Fe</div>
+    Hierro
+  </div>
+</div>
+
+<div id="reactor">🧪 Reactor</div>
+<!-- <button class="boton-potasio" >
+      ¡Comenzar el juego!
+    </button> -->
+ <!-- Overlay que mostrará el juego
+    <div id="overlay-juego" style="display: none;">
+      <div id="contenedor-juego">
+        <button id="cerrar-juego">✖ Cerrar</button>
+        <iframe id="iframe-juego" src="" frameborder="0" width="100%" height="600px"></iframe>
+      </div>
+    </div> -->
+
+<div id="result"></div>
+
+<div id="reaction-modal">
+  <div class="modal-content" id="modal-text"></div>
+</div>
+
+<script src="../src/js/juegos-actualidad.js"></script>
+</body>
+</html>
