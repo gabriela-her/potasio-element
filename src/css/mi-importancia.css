@@ -18,8 +18,8 @@ body {
 
 
 .seccion-potencia {
-  padding: 60px 40px;
-  background-color: #229c41;
+  padding: 30px 40px;
+  background-color: white;
   border-radius: 20px;
   margin-bottom: 40px;
 }
@@ -39,13 +39,13 @@ body {
 
 .titulo-potencia {
   font-size: 2rem;
-  color: white;
+  color: black;
   margin-bottom: 20px;
   line-height: 1.4;
 }
 
 .texto-potencia p {
-  font-size: 1.2rem;
+  font-size: 1 rem;
   line-height: 1.9;
   color: #333;
 }
@@ -83,20 +83,38 @@ body {
 
 /* ------------------------- fin de la section soy vital --------------------- */
 /* Imagen principal */
+.super-potasio {
+  position: relative;
+  width: 100%;
+  padding: 40px 0 0 0; /* quitamos padding bottom para evitar espacio extra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #imagen-disparadora {
   width: 300px;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  border-radius: 250px;
+  border-radius: 20px;
   animation: palpitar 1.5s infinite ease-in-out, resplandor 2s infinite ease-in-out;
+  border: solid black;
+  position: relative;
+  z-index: 10; /* para que esté encima de la franja */
+  margin-bottom: -3cm; /* "subimos" la imagen para que quede sobre la franja */
+  background: white; /* para que no se vea el borde transparente si es png */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* opcional para que destaque más */
 }
 
-.super-potasio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
+.yellow-line {
+  width: 100%;
+  height: 3cm;
+  background-color: #fff7b3;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  z-index: 5;
 }
+
 
 #imagen-disparadora:hover {
   transform: scale(1.05);
@@ -113,10 +131,10 @@ body {
 
 @keyframes resplandor {
   0%, 100% {
-    box-shadow: 0 0 20px #a7ff83, 0 0 30px #17c964;
+    box-shadow: 0 0 20px black;
   }
   50% {
-    box-shadow: 0 0 50px #ec5db0, 0 0 60px #17c964;
+    box-shadow: 0 0 px black;
   }
 }
 
@@ -157,12 +175,19 @@ body {
   transform: scale(1.2);
 }
 
+.super-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
 
 /* -----------------  inicio del cuestionario ---------------*/
 
 
-.evaluacion-potasio {
-  background: #F88C8C;
+.potasio-test {
+  background: #f88c8c7e;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -173,10 +198,11 @@ body {
 }
 
 
-.evaluacion-potasio h2 {
+.potasio-test h2 {
   font-size: 1.8rem;
   color: #f7f9f7;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 fieldset.pregunta {
@@ -189,7 +215,7 @@ fieldset.pregunta.activa {
   display: block; /* Solo la activa se ve */
 }
 
-.evaluacion-potasio form {
+.potasio-test form {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -203,6 +229,7 @@ fieldset.pregunta.activa {
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
+  line-height: 1.8rem;
 }
 
 .pregunta label {
@@ -215,7 +242,7 @@ fieldset.pregunta.activa {
   gap: 20px;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .botones button {
@@ -233,16 +260,46 @@ fieldset.pregunta.activa {
   background-color: #43cf63;
 }
 
+
+
 #resultado {
-  background-color: #fff3f8;
-  padding: 40px;
-  border-radius: 20px;
-  max-width: 700px;
-  margin: 50px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.868);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 #resultado.oculto {
-  display: none;
+  display: none !important;
+}
+
+#btnVolverInicio {
+  padding: 10px 20px;
+  margin: 20px auto 0 auto;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  max-width: 200px;
+  transition: background-color 0.3s ease;
+}
+
+#btnVolverInicio:hover {
+  background-color: #43cf63;
 }
 

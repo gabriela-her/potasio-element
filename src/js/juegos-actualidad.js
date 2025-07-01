@@ -1,4 +1,4 @@
-  const reactions = {
+const reactions = {
     "Agua": "💥 ¡Explosión violenta! El potasio reacciona fuertemente con el agua.",
     "Cloro": "☠️ Se forma cloruro de potasio. ¡Cuidado con los gases tóxicos!",
     "Oxígeno": "🔥 Se forma óxido de potasio. Combustión controlada.",
@@ -63,18 +63,3 @@
       reactor.style.background = "#fff";
     }
   });
-
-  const botonPotasio = document.querySelector('.boton-potasio');
-const overlayJuego = document.getElementById('overlay-juego');
-const cerrarJuego = document.getElementById('cerrar-juego');
-const iframeJuego = document.getElementById('iframe-juego');
-
-botonPotasio.addEventListener('click', () => {
-  iframeJuego.src = 'juegos-actualidad.html'; // Asegúrate de que la ruta sea correcta
-  overlayJuego.style.display = 'flex';
-});
-
-cerrarJuego.addEventListener('click', () => {
-  overlayJuego.style.display = 'none';
-  iframeJuego.src = ''; // Limpia el iframe para detener el juego
-});

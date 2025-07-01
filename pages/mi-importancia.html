@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Estás en riesgo de déficit de potasio?</title>
   <link
-        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../src/css/mi-importancia.css" />
   <link rel="stylesheet" href="../src/css/style.css">
 </head>
 
 <body>
-   <header>
+  <header>
     <div id="logo-container">
       <a href="../index.html"><i id="arrow-left-header"></i>
         <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
@@ -41,11 +41,13 @@
       <div class="contenedor-flex">
         <div class="texto-potencia">
           <h1 class="titulo-potencia">
-            Ya sabes quién soy y dónde estoy,ahora hablemos de por qué soy TAN IMPORTANTE
+            Mi importancia
           </h1>
           <p>
-            Soy fundamental para el cuerpo humano porque participo en procesos vitales que permiten que nuestro
-            organismo funcione correctamente. Sin mí, simplemente no podríamos vivir. 😎
+            Ya sabes quién soy y dónde estoy, pero ahora es momento de descubrir por qué SOY TAN ESENCIAL para ti. Soy
+            clave para que tu cuerpo funcione al 100%, participando en procesos vitales como el equilibrio de líquidos,
+            la transmisión nerviosa y la contracción muscular. Sin mí, tu organismo no podría mantener su energía ni su
+            ritmo de vida. ¡Así de importante soy!
           </p>
         </div>
         <div class="imagen-potencia">
@@ -61,14 +63,21 @@
       <img src="../imagenes/imagen-super-potasio.png" alt="Haz clic para ver el mapa mental" id="imagen-disparadora">
       <audio id="sonido-clic" src="../sonidos/mixkit-orchestra-triumphant-trumpets-2285.wav" preload="auto"></audio>
 
-      <div id="overlay-mapa" style="display: none;">
+      <!-- Overlay para el mapa mental -->
+      <div class="super-contenido" id="overlay-mapa" style="display: none;">
         <img src="../imagenes/mapa mental.png" alt="Mapa mental sobre el potasio" id="imagen-mapa">
         <span id="cerrar-mapa">✖</span>
       </div>
+
+      <!-- ✅ Franja amarilla visible siempre -->
+      <div class="yellow-line">
+        <p class=""> </p>
+      </div>
     </section>
 
+
     <!-- ----------- Encuesta -------- -->
-    <section class="evaluacion-potasio">
+    <section class="potasio-test">
       <h2>¿Tu y el potasio son buenos amigos?</h2>
       <p>Responde estas preguntas para descubrirlo y aprende cómo mejorar.</p>
 
@@ -112,39 +121,41 @@
     </section>
 
     <section id="resultado" class="oculto">
-      <h2>¿Qué tal te llevas con el potasio?</h2>
+      <!-- <h2>¿Qué tal te llevas con el potasio?</h2> -->
       <div id="nivel"></div>
       <p id="recomendacion"></p>
+
+
+      <button id="btnVolverInicio"> Volver al inicio</button>
     </section>
 
   </main>
 
-    <footer>
-      <div id="footer-nav">
-        <ul>
-          <li><a href="../pages/donde-estoy.html"><i id="arrow-left-footer"></i>Dónde estoy</a></li>
-          <li><a href="../pages/curiosidades.html">Curiosidades<i id="arrow-right-footer"></i></a></li>
-        </ul>
-      </div>
-      <div id="footer-info">
-        <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
-      </div>
-    <p>© 2025 Importancia del Potasio. Aprende, cuida y vive saludable.</p>
+  <footer>
+    <div id="footer-nav">
+      <ul>
+        <li><a href="../pages/donde-estoy.html"><i id="arrow-left-footer"></i>Dónde estoy</a></li>
+        <li><a href="../pages/curiosidades.html">Curiosidades<i id="arrow-right-footer"></i></a></li>
+      </ul>
+    </div>
+    <div id="footer-info">
+      <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
+    </div>
   </footer>
 
   <script src="../src/js/mi-importancia.js"></script>
   <script src="../src/js/script.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
-  <script>
-    $(function () {
-      $('a').each(function () {
-        if ($(this).prop('href') == window.location.href) {
-          $(this).addClass('active'); $(this).parents('li').addClass('active');
-        }
-      });
-    });
-  </script>
+   <!--Selecciona la pestaña activa del menú de navegación para ponerle la clase .active / Con JQuery-->
+    <script>
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
