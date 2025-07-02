@@ -12,7 +12,7 @@ opciones.forEach(opcion => {
     if (opcion.dataset.respuesta === "correcta") {
       opcion.classList.add("correcto");
       setTimeout(() => {
-        window.location.href = "./pages/que-soy.html";
+        window.location.href = "/potasio-element/pages/que-soy.html";
       }, 500); // medio segundo para que se vea el mensaje/efecto
     } else {
       opcion.classList.add("incorrecto");
