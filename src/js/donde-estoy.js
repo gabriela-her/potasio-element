@@ -37,3 +37,15 @@ function scrollDown2() {
   const element = document.getElementById("foodCards");
   element.scrollIntoView();
 }
+
+// Highlight the active link in the navigation bar
+document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('nav.topnav a').forEach(function (link) {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                    if (link.parentElement) {
+                        link.parentElement.classList.add('active');
+                    }
+                }
+            });
+        });
