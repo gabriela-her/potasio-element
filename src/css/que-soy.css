@@ -255,7 +255,7 @@ body {
   margin: 1.5rem auto 0;
   font-size: 2.5rem; 
   color: #f88c8c7e; 
-  font-weight: 900; /* para que la flecha se vea gruesa /
+  font-weight: 900; 
   width: fit-content;
   cursor: pointer;
   transition: color 0.3s ease;
