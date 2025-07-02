@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const sonido = document.getElementById('sonido-clic');
 
   disparador.addEventListener('click', () => {
-    overlay.style.display = 'flex';
+    overlay.style.display = 'flex';  //muestra el mapa 
     sonido.currentTime = 0;
     sonido.play();
   });
 
   cerrar.addEventListener('click', () => {
-    overlay.style.display = 'none';
+    overlay.style.display = 'none'; //oculta el mapa
   });
 
   const form = document.getElementById('potassiumForm');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function mostrarPregunta(index) {
     preguntas.forEach((f, i) => {
-      f.classList.toggle('activa', i === index);
+      f.classList.toggle('activa', i === index);  //// Solo muestra la pregunta actual
     });
 
     btnAnterior.disabled = index === 0;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const seleccion = preguntaActual.querySelector('input[type="radio"]:checked');
     if (!seleccion) {
       alert('Por favor selecciona una opción para continuar.');
-      return;
+      return; //no avanza si no hay seleccion 
     }
     if (indiceActual < preguntas.length - 1) {
       indiceActual++;
