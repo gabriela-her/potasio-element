@@ -12,7 +12,7 @@ opciones.forEach(opcion => {
     if (opcion.dataset.respuesta === "correcta") {
       opcion.classList.add("correcto");
       setTimeout(() => {
-        window.location.href = "/pages/que-soy.html";
+        window.location.href = "./pages/que-soy.html";
       }, 500); // medio segundo para que se vea el mensaje/efecto
     } else {
       opcion.classList.add("incorrecto");
@@ -47,8 +47,8 @@ function reiniciarPregunta() {
 
 
 // Cargar sonidos
-const sonidoHover = new Audio('/sonidos/button-index.mp3');
-const sonidoError = new Audio('/sonidos/wrong-index.mp3');
+const sonidoHover = new Audio('./sonidos/button-index.mp3');
+const sonidoError = new Audio('./sonidos/wrong-index.mp3');
 
 window.addEventListener('DOMContentLoaded', () => {
   const opciones = document.querySelectorAll('.opciones li');
