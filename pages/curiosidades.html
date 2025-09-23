@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png" href="../public/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../public/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../public/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Potasio">
+    <link rel="manifest" href="../public/favicon/site.webmanifest">
 </head>
+
 <body>
     <header>
-       <div id="logo-container">
-            <a href="https://celiami.github.io/periodic-table-project/#table-section" class="home-button" title="Volver a la tabla periódica">
-            <i class="fas fa-house"></i></a>
+        <div id="logo-container">
+            <a href="https://celiami.github.io/periodic-table-project/#table-section" class="home-button"
+                title="Volver a la tabla periódica">
+                <i class="fas fa-house"></i></a>
             <a href="../index.html">
                 <h1 id="pageTitle"><span id="atomic-numer">k<sup style="font-size: 0.6em"> 19</sup></span> POTASIO</h1>
             </a>
@@ -37,10 +46,10 @@
     </header>
     <section class="cards-curiosidades" id="cards-container">
         <h2>VAMOS A JUGAR: ¿VERDADERO O FALSO?</h2>
-            <p class="subtitle">Haz click en las afirmaciones sobre el potasio que creas que son correctas.</p>
-         <div id="inicio-container">
+        <p class="subtitle">Haz click en las afirmaciones sobre el potasio que creas que son correctas.</p>
+        <div id="inicio-container">
             <button id="inicio-btn">¡Empezar juego!</button>
-         </div>
+        </div>
     </section>
     <section class="game-stats">
         <p id="timer">Tiempo: 30</p>
@@ -48,21 +57,26 @@
     </section>
     <section class="cards-container" id="cards-container">
         <article class="card" data-truth="true">
-            <p>El potasio  reacciona con el agua, explota y arde con una llama lila por la rápida liberación de hidrógeno.</p>
+            <p>El potasio reacciona con el agua, explota y arde con una llama lila por la rápida liberación de
+                hidrógeno.</p>
         </article>
-        <article class="card" data-truth="false" data-correct="El potasio se encuentra en muchos alimentos, no solo en plátanos. Es esencial para el cuerpo humano.">
-            <p>El potasio se encuentra exclusivamente en los plátanos, es la única fuente que tiene el ser humano de ingerirlo en alimentos</p>
+        <article class="card" data-truth="false"
+            data-correct="El potasio se encuentra en muchos alimentos, no solo en plátanos. Es esencial para el cuerpo humano.">
+            <p>El potasio se encuentra exclusivamente en los plátanos, es la única fuente que tiene el ser humano de
+                ingerirlo en alimentos</p>
         </article>
         <article class="card" data-truth="true">
             <p>El potasio metálico debe guardarse en aceite porque reacciona con la humedad del aire</p>
         </article>
-        <article class="card" data-truth="false" data-correct="El potasio es imprescindible para el cuerpo humano, participa en funciones vitales como la contracción muscular.">
+        <article class="card" data-truth="false"
+            data-correct="El potasio es imprescindible para el cuerpo humano, participa en funciones vitales como la contracción muscular.">
             <p>El potasio es bueno para el cuerpo humano pero no imprescindible</p>
         </article>
         <article class="card" data-truth="true">
             <p>El potasio metálico es tan blando que se puede cortar con un cuchillo</p>
         </article>
-        <article class="card" data-truth="false" data-correct="El potasio no regula el oxígeno en la sangre, pero sí regula el equilibrio de líquidos y electrolitos.">
+        <article class="card" data-truth="false"
+            data-correct="El potasio no regula el oxígeno en la sangre, pero sí regula el equilibrio de líquidos y electrolitos.">
             <p>El potasio regula la cantidad de oxígeno en la sangre</p>
         </article>
     </section>
@@ -77,32 +91,33 @@
     </div>
     <section class="meme-container">
         <div class="meme-content">
-            <div class="text-meme">    
+            <div class="text-meme">
                 <p>¿Sabías que la palabra potasio se hizo viral y es un meme muy famoso?<br>
-                Se originó en un vídeo donde una chica pronuncia "potaxio". Aquí nace el término "potaxie" que se popularizó especialmente entre la comunidad LGBTQ+ y en Tik Tok.</p>
+                    Se originó en un vídeo donde una chica pronuncia "potaxio". Aquí nace el término "potaxie" que se
+                    popularizó especialmente entre la comunidad LGBTQ+ y en Tik Tok.</p>
                 <a class="saber-mas-link" href="https://es.wikipedia.org/wiki/Potaxie" target="_blank">Saber más</a>
             </div>
             <div class="potaxie-img">
                 <img src="../public/potaxie.jpg" alt="meme-potasio" class="potaxie-img" />
-            </div>    
-        </div> 
+            </div>
+        </div>
         <div class="meme-button">
             <button id="ver-meme-btn">Haz click para ver el meme</button>
         </div>
-    </section>        
-        <div id="video-modal"       style="display:none;">
-            <div class="modal-meme-content">
-                <button id="cerrar-video">✖</button>
-                <video id="potasio-video" controls width="100%">
-                 <source src="../public/video/potasiovideo.mp4" type="video/mp4">
-                 </video>
-            </div>
-        </div>   
+    </section>
+    <div id="video-modal" style="display:none;">
+        <div class="modal-meme-content">
+            <button id="cerrar-video">✖</button>
+            <video id="potasio-video" controls width="100%">
+                <source src="../public/video/potasiovideo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="../src/js/curiosidades.js"></script>
     <script src="../src/js/script.js"></script>
-    
+
     <footer>
         <div id="footer-nav">
             <ul>
@@ -119,8 +134,9 @@
         <div id="footer-info">
             <p>&copy; 2025 K<sup style="font-size: 0.5em">19</sup> Potasio. Proyecto realizado en Factoría F5.</p>
         </div>
- </footer>
-     
-    
+    </footer>
+
+
 </body>
+
 </html>

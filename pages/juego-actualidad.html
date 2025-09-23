@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>Potasio Reactor</title>
@@ -7,40 +8,47 @@
   <link rel="stylesheet" href="../src/css/juego-actualidad.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="../public/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="../public/favicon/favicon.svg">
+  <link rel="shortcut icon" href="../public/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../public/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Potasio">
+  <link rel="manifest" href="../public/favicon/site.webmanifest">
 </head>
+
 <body>
 
-<h1>⚗️🧪¡Mezclemos Elementos!🧪⚗️</h1>
-<p>🤓Arrastra un elemento al reactor para ver la reacción con el potasio🤓</p>
+  <h1>⚗️🧪¡Mezclemos Elementos!🧪⚗️</h1>
+  <p>🤓Arrastra un elemento al reactor para ver la reacción con el potasio🤓</p>
 
-<div id="elements">
-  <div class="element agua" draggable="true" data-element="Agua">
-    <div class="symbol">H₂O</div>
-    Agua
+  <div id="elements">
+    <div class="element agua" draggable="true" data-element="Agua">
+      <div class="symbol">H₂O</div>
+      Agua
+    </div>
+    <div class="element cloro" draggable="true" data-element="Cloro">
+      <div class="symbol">Cl</div>
+      Cloro
+    </div>
+    <div class="element oxigeno" draggable="true" data-element="Oxígeno">
+      <div class="symbol">O₂</div>
+      Oxígeno
+    </div>
+    <div class="element azufre" draggable="true" data-element="Azufre">
+      <div class="symbol">S</div>
+      Azufre
+    </div>
+    <div class="element hierro" draggable="true" data-element="Hierro">
+      <div class="symbol">Fe</div>
+      Hierro
+    </div>
   </div>
-  <div class="element cloro" draggable="true" data-element="Cloro">
-    <div class="symbol">Cl</div>
-    Cloro
-  </div>
-  <div class="element oxigeno" draggable="true" data-element="Oxígeno">
-    <div class="symbol">O₂</div>
-    Oxígeno
-  </div>
-  <div class="element azufre" draggable="true" data-element="Azufre">
-    <div class="symbol">S</div>
-    Azufre
-  </div>
-  <div class="element hierro" draggable="true" data-element="Hierro">
-    <div class="symbol">Fe</div>
-    Hierro
-  </div>
-</div>
 
-<div id="reactor">🧪 Reactor</div>
-<!-- <button class="boton-potasio" >
+  <div id="reactor">🧪 Reactor</div>
+  <!-- <button class="boton-potasio" >
       ¡Comenzar el juego!
     </button> -->
- <!-- Overlay que mostrará el juego
+  <!-- Overlay que mostrará el juego
     <div id="overlay-juego" style="display: none;">
       <div id="contenedor-juego">
         <button id="cerrar-juego">✖ Cerrar</button>
@@ -48,17 +56,17 @@
       </div>
     </div> -->
 
-<div id="result"></div>
+  <div id="result"></div>
 
-<div id="reaction-modal">
-  <div class="modal-content" id="modal-text"></div>
-</div>
-<div class="volver-tabla-container">
-      <a href="../pages/actualidad.html" class="back-to-table"
-        title="Regresa a la pagina actualidad">
-        <i class="fa fa-arrow-left"></i>
-      </a>
-    </div>
-<script src="../src/js/juegos-actualidad.js"></script>
+  <div id="reaction-modal">
+    <div class="modal-content" id="modal-text"></div>
+  </div>
+  <div class="volver-tabla-container">
+    <a href="../pages/actualidad.html" class="back-to-table" title="Regresa a la pagina actualidad">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+  </div>
+  <script src="../src/js/juegos-actualidad.js"></script>
 </body>
+
 </html>
