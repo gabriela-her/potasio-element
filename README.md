@@ -14,7 +14,7 @@ Valentina
 
 Cada una construyó una página que forma parte de esta experiencia interactiva con un enfoque único, pero bajo una estética y estructura compartidas.
 
-👉 Repositorio del proyecto (https://github.com/gabriela-her/potasio-element.git)
+👉 Repositorio del proyecto (gabriela-her.github.io/potasio-element/)
 
 
 ## ¿Cuál fue el reto? 💡
@@ -101,7 +101,7 @@ El proyecto está publicado en GitHub Pages desde la rama main
 
 Cada página incluye un botón/enlace para volver al proyecto general
 
-🔗 Ir al sitio publicado (https://github.com/gabriela-her/potasio-element.git)
+🔗 Ir al sitio publicado (gabriela-her.github.io/potasio-element/)
 
 
 
